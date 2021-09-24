@@ -16,7 +16,7 @@ export const utilFun = {
     addNum ({keyName, fitlerNmae, val, obj= [], isSet = false}) {
         let arr =  isSet ? new Set(obj)  : obj        
         let $total = 0
-        $total = this.fitlerList(fitlerNmae, val, obj).reduce(function (total, currentValue){
+        $total = this.fitlerList(fitlerNmae, val, arr).reduce(function (total, currentValue){
             return currentValue[keyName] ? (total + currentValue[keyName]) : total;
         }, 0)
         return $total    
@@ -36,9 +36,9 @@ export const utilFun = {
       * @description: 总览数据: 医生总量、接诊次数、接诊人数、用药总量
       */
      overviewData(value) {
-      let dorNum = this.addNum('dataNum', 'unit', value, this.visitRecord)
-      let timesNum = this.addNum('dataNum', 'unit', value, this.visitRecord)
-      let personNm = this.addNum('dataNum', 'unit', value, this.visitRecord)
-      let drugNum = this.addNum('dataNum', 'unit', value, this.diagnosticRecord) 
+      let dorNum = this.addNum('dataNum', 'unit', value, visitRecord)
+      let timesNum = this.addNum('dataNum', 'unit', value, visitRecord)
+      let personNm = this.addNum('dataNum', 'unit', value, visitRecord)
+      let drugNum = this.addNum('dataNum', 'unit', value, diagnosticRecord) 
     }
 }

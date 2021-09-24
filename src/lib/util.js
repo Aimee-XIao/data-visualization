@@ -4,8 +4,7 @@ import { visitRecord } from "./dataList/visitRecord";
 
 export const utilFun = {
   initList(val) {
-    return {
-      prescriptionDetailsList: this.fitlerList({
+    return { prescriptionDetailsList: this.fitlerList({
         val: val,
         objs: prescriptionDetails,
       }),
@@ -26,7 +25,6 @@ export const utilFun = {
     let map = {}, dest = [];
     for (const iterator of list) {
       if (!map[iterator[keyname]]) {
-        console.log(iterator[keyname])
         dest.push({ name: iterator[keyname], data: [iterator] });
         map[iterator[keyname]] = iterator;
       } else {
@@ -64,9 +62,9 @@ export const utilFun = {
    * @param {Array} obj 数据
    * @return {Array}} 滤过后数组对象
    */
-  fitlerList({ keyNames = "unit", val, objs }) {
+  fitlerList({ keyNames = "unit", val, objs, flage = false }) {
     return objs.filter(function (item) {
-      return item[keyNames] == val;
+      return flage ? item[keyNames].indexOf(val) != -1 : item[keyNames] == val;
     });
   },
 };

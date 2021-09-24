@@ -1,11 +1,16 @@
 <template>
   <div class="screen-box">
 
+    <mapDot></mapDot>  
   </div>
 </template>
 <script>
 import {utilFun} from '../lib/util'
+import mapDot from '../components/map_dot.vue'
 export default {
+ components: {
+    mapDot
+  },
   data() {
     return {
       dateList: {}
@@ -16,7 +21,7 @@ export default {
   },
   methods: {
     inits() {
-      this.dateList = utilFun.initList('鍗椾含鍖婚櫌')
+      this.dateList = utilFun.initList('南京医院')
       console.log(this.dateList)
     }      
   }

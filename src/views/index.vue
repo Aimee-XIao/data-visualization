@@ -14,9 +14,9 @@ export default {
   data() {
     return {
       dateList: {},
-      firstList: [], // å„ç§‘å®¤æ¥è¯Šäººå‘˜ç»Ÿè®¡
-      secondList: [], // å„ç§‘å®¤å¼€å•æƒ…å†µ
-      thirdList: [], // å„ç§‘å®¤è¯å“å¼€å•æƒ…å†µ
+      firstList: [], // ¸÷¿ÆÊÒ½ÓÕïÈËÔ±Í³¼Æ
+      secondList: [], // ¸÷¿ÆÊÒ¿ªµ¥Çé¿ö
+      thirdList: [], // ¸÷¿ÆÊÒÒ©Æ·¿ªµ¥Çé¿ö
     }
   },
   mounted() {
@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     inits() {
-      this.dateList = utilFun.initList('å—äº¬åŒ»é™¢')
+      this.dateList = utilFun.initList('ÄÏ¾©Ò½Ôº')
       // this.getFirst(this.dateList.visitRecordList,'department')
       this.getSecond(this.dateList.prescriptionDetailsList,'billingDepartment')
       this.getThird(this.dateList.prescriptionDetailsList,'billingDepartment')

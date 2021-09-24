@@ -10,6 +10,15 @@
         <div class="nanjing-dots"></div>
       </div>
     </div>
+    <!-- 航线 -->
+    <div class="flight-line">
+      <div class="flight-dots"></div>
+      <div class="flight-dots"></div>
+      <div class="flight-dots"></div>
+      <div class="flight-dots"></div>
+      <div class="flight-dots"></div>
+    </div>
+
     <div
       class="dots-box"
       v-for="(item, index) in doctorList"
@@ -25,7 +34,9 @@
 import { dots } from "../lib/dataList/dots";
 export default {
   data() {
-    return {};
+    return {
+      planePath: 'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z';
+    };
   },
   computed: {
     doctorList() {
@@ -82,7 +93,7 @@ export default {
     justify-content: center;
     align-items: center;
     position: absolute;
-   top: 401px;
+    top: 401px;
     right: 490px;
     .nanjing {
       width: 92px;
@@ -107,6 +118,35 @@ export default {
       background: #ffb400;
       border: 5px solid #e6e1e1;
       border-radius: 50%;
+    }
+  }
+  .flight-line {
+    .flight-dots {
+      width: 35px;
+      height: 35px;
+      background: #ffb400;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .flight-dots:first-of-type {
+      top: 321px;
+      left: 937px;
+    }
+    .flight-dots:nth-of-type(2) {
+      top: 497px;
+      left: 750px;
+    }
+    .flight-dots:nth-of-type(3) {
+      top: 818px;
+      left: 700px;
+    }
+    .flight-dots:nth-of-type(4) {
+      top: 761px;
+      left: 1030px;
+    }
+    .flight-dots:last-of-type {
+      top: 980px;
+      left: 842px;
     }
   }
   .dots-title {

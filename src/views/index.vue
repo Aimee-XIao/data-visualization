@@ -4,7 +4,6 @@
   </div>
 </template>
 <script>
-/* eslint-disable */
 import {utilFun} from '../lib/util'
 export default {
   data() {

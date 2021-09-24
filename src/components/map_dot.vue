@@ -82,7 +82,7 @@ export default {
     justify-content: center;
     align-items: center;
     position: absolute;
-   top: 401px;
+    top: 401px;
     right: 490px;
     .nanjing {
       width: 92px;

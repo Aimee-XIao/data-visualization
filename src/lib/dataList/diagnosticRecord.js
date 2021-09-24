@@ -13,21 +13,20 @@
 患者编号  patientNo
 就诊IDs   visitIDS
 */
- 
-export const diagnosticRecord = [
-    {
-      id: 125445,
-      unit: '西京医院',
-      drugType: '西药',
-      drugName: '阿莫西林',
-      nnumber: 3,
-      doseType: 2,
-      isSkinTest: N,
-      BillingDepartment: '内科',
-      patientName: '张三',
-      DoctorAdvice: 'wu',
-      patientNo: 1254861,
-      visitIDS: 1254841
+
+export const diagnosticRecord = [{
+        id: 125445,
+        unit: '南京医院',
+        drugType: '西药',
+        drugName: '阿莫西林',
+        nnumber: 3,
+        doseType: 2,
+        isSkinTest: 'N',
+        BillingDepartment: '内科',
+        patientName: '张三',
+        DoctorAdvice: 'wu',
+        patientNo: 1254861,
+        visitIDS: 1254841
     },
     {
         id: 125446,
@@ -36,7 +35,7 @@ export const diagnosticRecord = [
         drugName: '阿莫西林',
         nnumber: 3,
         doseType: 2,
-        isSkinTest: N,
+        isSkinTest: 'N',
         BillingDepartment: '内科',
         patientName: '张三',
         DoctorAdvice: 'wu',
@@ -50,7 +49,7 @@ export const diagnosticRecord = [
         drugName: '阿莫西林',
         nnumber: 3,
         doseType: 2,
-        isSkinTest: N,
+        isSkinTest: 'N',
         BillingDepartment: '内科',
         patientName: '张三',
         DoctorAdvice: 'wu',
@@ -59,12 +58,12 @@ export const diagnosticRecord = [
     },
     {
         id: 125448,
-        unit: '西京医院',
+        unit: '南京医院',
         drugType: '西药',
         drugName: '阿莫西林',
         nnumber: 3,
         doseType: 2,
-        isSkinTest: N,
+        isSkinTest: 'N',
         BillingDepartment: '内科',
         patientName: '张三',
         DoctorAdvice: 'wu',
@@ -78,7 +77,7 @@ export const diagnosticRecord = [
         drugName: '阿莫西林',
         nnumber: 3,
         doseType: 2,
-        isSkinTest: N,
+        isSkinTest: 'N',
         BillingDepartment: '内科',
         patientName: '张三',
         DoctorAdvice: 'wu',
@@ -87,12 +86,12 @@ export const diagnosticRecord = [
     },
     {
         id: 1254410,
-        unit: '西京医院',
+        unit: '南京医院',
         drugType: '西药',
         drugName: '阿莫西林',
         nnumber: 3,
         doseType: 2,
-        isSkinTest: N,
+        isSkinTest: 'N',
         BillingDepartment: '内科',
         patientName: '张三',
         DoctorAdvice: 'wu',
@@ -106,7 +105,7 @@ export const diagnosticRecord = [
         drugName: '阿莫西林',
         nnumber: 3,
         doseType: 2,
-        isSkinTest: N,
+        isSkinTest: 'N',
         BillingDepartment: '内科',
         patientName: '张三',
         DoctorAdvice: 'wu',
@@ -115,12 +114,12 @@ export const diagnosticRecord = [
     },
     {
         id: 1254412,
-        unit: '西京医院',
+        unit: '南京医院',
         drugType: '西药',
         drugName: '阿莫西林',
         nnumber: 3,
         doseType: 2,
-        isSkinTest: N,
+        isSkinTest: 'N',
         BillingDepartment: '内科',
         patientName: '张三',
         DoctorAdvice: 'wu',
@@ -134,7 +133,7 @@ export const diagnosticRecord = [
         drugName: '阿莫西林',
         nnumber: 3,
         doseType: 2,
-        isSkinTest: N,
+        isSkinTest: 'N',
         BillingDepartment: '内科',
         patientName: '张三',
         DoctorAdvice: 'wu',
@@ -148,7 +147,7 @@ export const diagnosticRecord = [
         drugName: '阿莫西林',
         nnumber: 3,
         doseType: 2,
-        isSkinTest: N,
+        isSkinTest: 'N',
         BillingDepartment: '内科',
         patientName: '张三',
         DoctorAdvice: 'wu',
@@ -162,12 +161,12 @@ export const diagnosticRecord = [
         drugName: '阿莫西林',
         nnumber: 3,
         doseType: 2,
-        isSkinTest: N,
+        isSkinTest: 'N',
         BillingDepartment: '内科',
         patientName: '张三',
         DoctorAdvice: 'wu',
         patientNo: 1254861,
         visitIDS: 1254841
     }
-    
+
 ]

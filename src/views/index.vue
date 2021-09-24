@@ -13,7 +13,10 @@ export default {
   },
   data() {
     return {
-      dateList: {}
+      dateList: {},
+      firstList: [], // 各科室接诊人员统计
+      secondList: [], // 各科室开单情况
+      thirdList: [], // 各科室药品开单情况
     }
   },
   mounted() {
@@ -21,9 +24,28 @@ export default {
   },
   methods: {
     inits() {
-      this.dateList = utilFun.initList('�Ͼ�ҽԺ')
-      console.log(this.dateList)
-    }      
+      this.dateList = utilFun.initList('南京医院')
+      // this.getFirst(this.dateList.visitRecordList,'department')
+      this.getSecond(this.dateList.prescriptionDetailsList,'billingDepartment')
+      this.getThird(this.dateList.prescriptionDetailsList,'billingDepartment')
+    },
+    getFirst(list, keyname) {
+      this.firstList = utilFun.groupList(list, keyname)
+    },
+    getSecond(list, keyname) {
+      this.secondList = utilFun.groupList(list, keyname)      
+    },
+    getThird(list, keyname) {
+     const keyList = ['billingDepartment', 'drugType', 'drugName', 'number']
+     keyList.forEach(element => {
+       console.log(element)
+     });
+      this.thirdList = utilFun.groupList(list, keyname)
+      console.log(this.thirdList)
+    },
+    forGroup(keyname) {
+     let arr = utilFun.groupList(list, keyname)
+    }
   }
 }
 </script>

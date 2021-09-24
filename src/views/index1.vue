@@ -1,32 +1,21 @@
 <template>
   <div class="screen-box">
-    <Keshi :renyuan="firstList" :keshidan="secondList" :yaopin="thirdList"></Keshi>
+     <Keshi></Keshi>
     <mapDot></mapDot>
-    <div class="bottom-box">
-      <div class="bottom-item" v-for="(item, index) in fourthList" :key="index">
-        <p class="number">{{item.number}}</p>
-        <p class="name">{{item.name}}</p>
-      </div>
-    </div>
-    <huanzhe :renyuan="fifthList" :keshidan="sixthList" :yaopin="thirdList"></huanzhe>
-    
   </div>
 </template>
 <script>
 import { utilFun } from "../lib/util";
 import mapDot from "../components/map_dot.vue";
 import Keshi from "../components/keshifenxi/keshifenxi.vue";
-import huanzhe from "../components/huanzhefenxi/huanzhefenxi.vue";
-import _ from "lodash";
 import moment from 'moment';
+import _ from "lodash";
 
 export default {
   components: {
     mapDot,
-    Keshi,
-    huanzhe
+    Keshi
   },
-
   data() {
     return {
       dateList: {},
@@ -52,14 +41,12 @@ export default {
   methods: {
     inits() {
       this.dateList = utilFun.initList("南京医院");
-      this.getFirst(this.dateList.visitRecordList,'department')
-      this.getSecond(this.dateList.prescriptionDetailsList, "billingDepartment");
-      this.getThird(this.dateList.prescriptionDetailsList);
-      this.getFourth()
-       this.getFifth(this.dateList.prescriptionDetailsList);
-      this.getSixth(this.dateList.diagnosticRecordList, 'diagnostic');
+      // this.getFirst(this.dateList.visitRecordList,'department')
+      // this.getSecond(this.dateList.prescriptionDetailsList, "billingDepartment");
+      // this.getFifth(this.dateList.prescriptionDetailsList);
+      this.getFourth();
     },
-   getFirst(list, keyname) {
+    getFirst(list, keyname) {
       this.firstList = utilFun.groupList(list, keyname);
     },
     getSecond(list, keyname) {
@@ -76,7 +63,7 @@ export default {
       }
     },
     getFourth() {
-      const addObj = (key, name, list)=>{
+      const addObj = (key, name, list) => {
         let number = 0
         let arr = key == 'time'? list : this.getXYData(list, key);
         if (key == 'time') {
@@ -94,8 +81,7 @@ export default {
           list = this.dateList.prescriptionDetailsList
         }
         this.fourthList.push(addObj(iterator.key, iterator.name, list))
-      }      
-      console.log(this.fourthList)
+      }
     },
     forGroup(list) {
       const grplist = _(list).groupBy("billingDepartment").values()
@@ -154,36 +140,5 @@ export default {
   box-sizing: border-box;
   background-image: url(../assets/img/bg.png);
   background-size: 100% 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  .bottom-box {
-    flex: 1;
-    height: 360px;
-    margin: 0  80px 50px 80px;
-    background-image: url(../assets/img/chart7_bg.png);
-    background-size: 100% 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding-bottom: 50px;
-    .bottom-item {
-      .number {
-        font-size: 56px;
-font-family: DINAlternate;
-font-weight: bold;
-color: #00BCF4;
-line-height: 80px;
-      }
-      .name {
-        font-size: 24px;
-font-family: FZLanTingHei-R-GBK;
-font-weight: 400;
-color: #00BCF4;
-line-height: 63px;
-      }
-    }
-    
-  }
 }
 </style>

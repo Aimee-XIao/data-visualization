@@ -20,13 +20,15 @@
     </div>
 
     <div
-      class="dots-box"
+      class="dots-box "
       v-for="(item, index) in doctorList"
       :key="index"
+
       :style="{ top: item.top + 'px', left: item.left + 'px' }"
+      @click="select(item, index)"
     >
       <p>{{ item.unit }}</p>
-      <p class="dots"></p>
+      <p class="dots dots-item"></p>
     </div>
   </div>
 </template>
@@ -35,8 +37,7 @@ import { dots } from "../lib/dataList/dots";
 export default {
   data() {
     return {
-      planePath:
-        "path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z",
+      planePath: 'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z'
     };
   },
   computed: {
@@ -54,6 +55,11 @@ export default {
   mounted() {
     // console.log(this.doctorList);
   },
+  methods: {
+    select(item, index) {
+
+    }
+  }
 };
 </script>
 <style lang="scss" scope>
@@ -189,7 +195,40 @@ export default {
       flex-shrink: 0;
       margin-left: 6px;
     }
+     .dots-item::after {
+      background-color: #2ea598;
+    }
+    .dots-item::before {
+      background-color: rgba(0, 188, 244, 0.1);
+    }
+    .dots-item::before,
+    .dots-item::after {
+      content: '';
+      widows: 80px;
+      height: 80px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -40px;
+      margin-top: -40px;
+      border-radius: 50%;
+      animation: warn 1.5s ease-out 0s infinite;
+    }
+    @keyframes warn {
+      0% {
+        transform: scale(0.5);
+        opacity: 1;
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.4);
+        opacity: 0;
+      }
+    }
   }
+  
 }
 @keyframes scale {
   0% {

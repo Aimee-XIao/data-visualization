@@ -13,14 +13,6 @@
             <p class="number">{{ item.data.length }}</p>
             <p class="name">{{ item.name }}</p>
           </div>
-           <div
-            v-for="(item, index) in renyuan"
-            class="renyuan-item"
-            :key="index"
-          >
-            <p class="number">{{ item.data.length }}</p>
-            <p class="name">{{ item.name }}</p>
-          </div>
         </div>
       </div>
       <div class="keshi">
@@ -210,7 +202,7 @@ export default {
       }
       #keshi {
         width: 896px;
-        height: 600px;
+        height: 490px;
       }
     }
     .yaopin {

@@ -13,6 +13,14 @@
             <p class="number">{{ item.data.length }}</p>
             <p class="name">{{ item.name }}</p>
           </div>
+           <div
+            v-for="(item, index) in renyuan"
+            class="renyuan-item"
+            :key="index"
+          >
+            <p class="number">{{ item.data.length }}</p>
+            <p class="name">{{ item.name }}</p>
+          </div>
         </div>
       </div>
       <div class="keshi">
@@ -44,7 +52,6 @@
   </div>
 </template>
 <script>
-
 export default {
   props: ["renyuan", "keshidan", "yaopin"],
   data() {
@@ -52,7 +59,7 @@ export default {
       arr: [],
       yaopinList: [],
       myChart: null,
-      chart: []
+      chart: [],
     };
   },
 
@@ -60,7 +67,7 @@ export default {
     this.$nextTick(() => {
       this.arr = this.renyuan;
       this.yaopinList = this.yaopin;
-      this.chart = this.keshidan
+      this.chart = this.keshidan;
       this.chart && this.initchart();
     });
   },
@@ -68,15 +75,11 @@ export default {
     initchart() {
       this.myChart = this.$echarts.init(document.getElementById("keshi"));
       this.myChart.setOption({
-        xAxis: {
-          type: "value",
-          show: false,
-        },
         grid: {
-          top: 0,
-          bottom: 0,
+          left: '3%',
+          right: 0,
         },
-        yAxis: {
+        xAxis: {
           type: "category",
           axisTick: {
             show: false,
@@ -88,21 +91,28 @@ export default {
             fontSize: 24,
             color: "rgba(0, 188, 244, 1)",
           },
+          splitLine: {
+            show: false,
+          },
           data: this.chart ?. x,
+        },
+        yAxis: {
+          type: "value",
+          splitLine: {
+            show: false,
+          },
+          axisLabel: {
+            show: true,
+          },
         },
         series: [
           {
             data: this.chart ?. y,
             type: "bar",
-            barWidth: 10,
-            barCategoryGap: 39,
+            barWidth: 12,
             showBackground: true,
-            label: {
-              show: true,
-              position: "right",
-            },
             backgroundStyle: {
-              color: "rgba(220, 220, 220, 0.8)",
+              color: "rgba(0, 188, 244, 0.2)",
             },
           },
         ],
@@ -156,9 +166,9 @@ export default {
         align-items: center;
         flex-wrap: wrap;
         .renyuan-item {
-          width: 176px;
-          height: 158px;
-          background-image: url(../../assets/img/chart1_bg.png);
+          width: 124px;
+          height: 156px;
+          background-image: url(../../assets/img/chart1_bg7.png);
           background-size: 100% 100%;
           display: flex;
           flex-direction: column;
@@ -287,9 +297,9 @@ export default {
           width: 100%;
           display: flex;
           flex-direction: column;
-              height: 500px;
-    overflow-x: hidden;
-    overflow-y: auto;
+          height: 500px;
+          overflow-x: hidden;
+          overflow-y: auto;
           .item {
             width: 100%;
             height: 85px;

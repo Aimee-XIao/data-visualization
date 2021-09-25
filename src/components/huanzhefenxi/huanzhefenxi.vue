@@ -3,7 +3,7 @@
     <div class="keshi-title"></div>
     <div class="keshi-box">
       <div class="renyuan">
-        <div class="renyuan-title">本年度各月份病患数量</div>
+        <div class="renyuan-title"></p>本年度各月份病患数量</div>
         <div id="binhuan"></div>
       </div>
       <div class="keshi">
@@ -18,7 +18,6 @@
   </div>
 </template>
 <script>
-
 export default {
   props: ["renyuan", "keshidan", "yaopin"],
   data() {
@@ -29,7 +28,7 @@ export default {
       chart: [],
       zhenChart: null,
       huanzheChart: null,
-      huanzheList: {}
+      huanzheList: {},
     };
   },
 
@@ -37,65 +36,72 @@ export default {
     this.$nextTick(() => {
       this.arr = this.renyuan;
       this.huanzheList = this.yaopin;
-      this.chart = this.keshidan
+      this.chart = this.keshidan;
       this.arr && this.initchart();
-      this.chart && this.initZhen()
-    //   this.huanzheList && this.initHuan()
-    this.initHuan()
+      this.chart && this.initZhen();
+      console.log("---------", this.chart);
+      //   this.huanzheList && this.initHuan()
+      this.initHuan();
     });
   },
   methods: {
     initchart() {
       this.myChart = this.$echarts.init(document.getElementById("binhuan"));
       this.myChart.setOption({
-         xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: this.arr ?. x
-    },
-    yAxis: {
-        type: 'value',
-         axisLabel: {
-            show: false
+        xAxis: {
+          type: "category",
+          boundaryGap: false,
+          data: this.arr?.x,
         },
-        axisLine: {
-            show:false
+        yAxis: {
+          type: "value",
+          axisLabel: {
+            show: true,
+          },
+          axisLine: {
+            show: false,
+          },
+          axisTick: {
+            show: false,
+          },
+          splitLine: {
+             color: 'rgba(0, 188, 244, 0.5)'
+          },
+          
+          
         },
-        axisTick: {
-            show: false
-        }
-    },
-    series: [{
-        data: this.arr ?. y,
-        type: 'line',
-         itemStyle: {
-                color: 'rgba(0, 222, 255, 1)'
+        series: [
+          {
+            data: this.arr?.y,
+            type: "line",
+            smooth: true,
+            itemStyle: {
+              color: "rgba(0, 222, 255, 1)",
             },
-        areaStyle: {
-                color: this.$echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                    offset: 0,
-                    color: 'rgba(0, 222, 255, 1)'
-                }, {
-                    offset: 1,
-                    color: '#ffe'
-                }])
+            areaStyle: {
+              color: this.$echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "rgba(0, 222, 255, 1)",
+                },
+                {
+                  offset: 1,
+                  color: "rgba(0, 222, 255, 0.1)",
+                },
+              ]),
             },
-    }]
-        
+          },
+        ],
       });
     },
     initZhen() {
-            this.zhenChart = this.$echarts.init(document.getElementById("zhenduan"));
+      this.zhenChart = this.$echarts.init(document.getElementById("zhenduan"));
       this.zhenChart.setOption({
-        xAxis: {
-          type: "value",
-          show: false,
-        },
         grid: {
-          top: 0,
-          bottom: 0,
+          left: "3%",
+          right: 0,
         },
-        yAxis: {
+        xAxis: {
           type: "category",
           axisTick: {
             show: false,
@@ -107,123 +113,221 @@ export default {
             fontSize: 24,
             color: "rgba(0, 188, 244, 1)",
           },
-          data: this.chart ?. x,
+          splitLine: {
+            show: false,
+          },
+          data: this.chart?.x,
+        },
+        yAxis: {
+          type: "value",
+          splitLine: {
+            show: false,
+          },
+          axisLabel: {
+            show: true,
+          },
         },
         series: [
           {
-            data: this.chart ?. y,
+            data: this.chart?.y,
             type: "bar",
-            barWidth: 10,
-            barCategoryGap: 39,
+            barWidth: 12,
             showBackground: true,
-            label: {
-              show: true,
-              position: "right",
-            },
             backgroundStyle: {
-              color: "rgba(220, 220, 220, 0.8)",
+              color: "rgba(0, 188, 244, 0.2)",
             },
           },
         ],
       });
     },
     initHuan() {
-        this.huanzheChart = this.$echarts.init(document.getElementById('huanzhe'))
-        this.huanzheChart.setOption({
-             tooltip: {
-    trigger: 'item',
-    formatter: '{a} <br/>{b} : {c} ({d}%)'
-  },
-  legend: {
-    left: 'center',
-    top: 'bottom',
-    data: [
-      'rose1',
-      'rose2',
-      'rose3',
-      'rose4',
-      'rose5',
-      'rose6',
-      'rose7',
-      'rose8'
-    ]
-  },
-  toolbox: {
-    show: true,
-    feature: {
-      mark: { show: true },
-      dataView: { show: true, readOnly: false },
-      restore: { show: true },
-      saveAsImage: { show: true }
-    }
-  },
-  series: [
-    {
-      name: 'Area Mode',
-      type: 'pie',
-      radius: [20, 80],
-      center: ['25%', '25%'],
-      roseType: 'area',
-      itemStyle: {
-        borderRadius: 5
-      },
-      data: [
-        { value: 30, name: 'rose 1' },
-        { value: 28, name: 'rose 2' },
-        { value: 26, name: 'rose 3' },
-       
-      ]
+      this.huanzheChart = this.$echarts.init(
+        document.getElementById("huanzhe")
+      );
+      this.huanzheChart.setOption({
+        tooltip: {
+          trigger: "item",
+          formatter: "{a} <br/>{b} : {c} ({d}%)",
+        },
+        legend: {
+          left: "center",
+          top: "bottom",
+          data: [
+            "rose1",
+            "rose2",
+            "rose3",
+            "rose4",
+            "rose5",
+            "rose6",
+            "rose7",
+            "rose8",
+          ],
+        },
+        toolbox: {
+          show: true,
+          feature: {
+            mark: { show: true },
+            dataView: { show: true, readOnly: false },
+            restore: { show: true },
+            saveAsImage: { show: true },
+          },
+        },
+        series: [
+          {
+            name: "Area Mode",
+            type: "pie",
+            radius: [20, 80],
+            center: ["25%", "25%"],
+            roseType: "area",
+            itemStyle: {
+              borderRadius: 5,
+            },
+            data: [
+              {
+                value: 30,
+                name: "rose 1",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(134, 228, 255, 1)",
+                },
+              },
+              {
+                value: 28,
+                name: "rose 2",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(25, 100, 150, 1)",
+                },
+              },
+              {
+                value: 26,
+                name: "rose 3",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(25, 150, 200, 1)",
+                },
+              },
+              {
+                value: 26,
+                name: "rose 3",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(25, 175, 225, 1)",
+                },
+              },
+            ],
+          },
+          {
+            name: "Area Mode",
+            type: "pie",
+            radius: [20, 80],
+            center: ["75%", "25%"],
+            roseType: "area",
+            itemStyle: {
+              borderRadius: 5,
+            },
+            data: [
+              {
+                value: 30,
+                name: "rose 1",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(134, 228, 255, 1)",
+                },
+              },
+              {
+                value: 28,
+                name: "rose 2",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(25, 100, 150, 1)",
+                },
+              },
+              {
+                value: 26,
+                name: "rose 3",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(25, 150, 200, 1)",
+                },
+              },
+            ],
+          },
+          {
+            name: "Area Mode",
+            type: "pie",
+            radius: [20, 80],
+            center: ["25%", "75%"],
+            roseType: "area",
+            itemStyle: {
+              borderRadius: 5,
+            },
+            data: [
+              {
+                value: 30,
+                name: "rose 1",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(134, 228, 255, 1)",
+                },
+              },
+              {
+                value: 28,
+                name: "rose 2",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(25, 100, 150, 1)",
+                },
+              },
+              {
+                value: 26,
+                name: "rose 3",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(25, 150, 200, 1)",
+                },
+              },
+            ],
+          },
+          {
+            name: "Area Mode",
+            type: "pie",
+            radius: [20, 80],
+            center: ["75%", "75%"],
+            roseType: "area",
+            itemStyle: {
+              borderRadius: 5,
+            },
+            data: [
+              {
+                value: 30,
+                name: "rose 1",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(134, 228, 255, 1)",
+                },
+              },
+              {
+                value: 28,
+                name: "rose 2",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(25, 100, 150, 1)",
+                },
+              },
+              {
+                value: 26,
+                name: "rose 3",
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(25, 150, 200, 1)",
+                },
+              },
+            ],
+          },
+        ],
+      });
     },
-    {
-      name: 'Area Mode',
-      type: 'pie',
-      radius: [20, 80],
-      center: ['75%', '25%'],
-      roseType: 'area',
-      itemStyle: {
-        borderRadius: 5
-      },
-      data: [
-        { value: 30, name: 'rose 1' },
-        { value: 28, name: 'rose 2' },
-        { value: 26, name: 'rose 3' },
-       
-      ]
-    },
-    {
-      name: 'Area Mode',
-      type: 'pie',
-      radius: [20, 80],
-      center: ['25%', '75%'],
-      roseType: 'area',
-      itemStyle: {
-        borderRadius: 5
-      },
-      data: [
-        { value: 30, name: 'rose 1' },
-        { value: 28, name: 'rose 2' },
-        { value: 26, name: 'rose 3' },
-       
-      ]
-    },
-    {
-      name: 'Area Mode',
-      type: 'pie',
-      radius: [20, 80],
-      center: ['75%', '75%'],
-      roseType: 'area',
-      itemStyle: {
-        borderRadius: 5
-      },
-      data: [
-        { value: 30, name: 'rose 1' },
-        { value: 28, name: 'rose 2' },
-        { value: 26, name: 'rose 3' },
-      ]
-    }
-  ]
-        })
-    }
   },
 };
 </script>
@@ -254,9 +358,9 @@ export default {
       flex-direction: column;
       align-items: flex-start;
       #binhuan {
-         width: 943px;
+        width: 943px;
         height: 375px;
-     }
+      }
       .renyuan-title {
         width: 500px;
         height: 60px;
@@ -269,7 +373,6 @@ export default {
         font-weight: bold;
         color: #ffffff;
       }
-     
     }
     .keshi {
       justify-content: flex-start;
@@ -288,7 +391,7 @@ export default {
         font-weight: bold;
         color: #ffffff;
       }
-      #keshi {
+      #zhenduan {
         width: 896px;
         height: 600px;
       }
@@ -312,10 +415,9 @@ export default {
         color: #ffffff;
       }
       #huanzhe {
-          width: 100%;
-          height: 590px;
+        width: 100%;
+        height: 590px;
       }
-
     }
   }
 }

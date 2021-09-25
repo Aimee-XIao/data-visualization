@@ -56,7 +56,7 @@ export default {
       this.getSecond(this.dateList.prescriptionDetailsList, "billingDepartment");
       this.getThird(this.dateList.prescriptionDetailsList);
       this.getFourth()
-       this.getFifth(this.dateList.prescriptionDetailsList);
+      this.getFifth(this.dateList.prescriptionDetailsList);
       this.getSixth(this.dateList.diagnosticRecordList, 'diagnostic');
     },
    getFirst(list, keyname) {

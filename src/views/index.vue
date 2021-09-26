@@ -178,16 +178,17 @@ export default {
       // let arr = this.getXYData(list,keyname);
       let arr = [1,2,3,1,4,1,2,1,1,2,3,2];
       let setArr = new Set(arr);
-      const add1 = (item,iterator) => {
+      const add1 = (arr,iterator) => {
         let obj = arr.filter(function (item) {
           return item == iterator;
         })
         return obj.length;
       }
+    
       const add = (setArr, arr) => {
         let sum = []
         for (const iterator of setArr) {
-         sum.push(this.add1(item,iterator))
+         sum.push(this.add1(arr,iterator))
         }
         return sum
       }

@@ -1530,3 +1530,6 @@ export const list8 = [
 // 空二十六师泰和场站医院
 // 上海基地门诊部
 // 空军第一后勤训练基地 
+export const dList =  {
+  list1,list2,list3,list4,list5,list6,list7
+}

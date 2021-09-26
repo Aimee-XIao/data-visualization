@@ -1,7 +1,7 @@
 /**
 @description: 处方明细
 编号  id
-单位  unit
+单位  
 药品类别 drugType
 药品名称  drugName  
 数量  number

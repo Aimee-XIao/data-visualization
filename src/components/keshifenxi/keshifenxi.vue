@@ -60,6 +60,7 @@ export default {
       this.arr = this.renyuan;
       this.yaopinList = this.yaopin;
       this.chart = this.keshidan;
+      console.log('keshidan', this.keshidan)
       this.chart && this.initchart();
     });
   },
@@ -86,7 +87,7 @@ export default {
           splitLine: {
             show: false,
           },
-          data: this.chart ?. x,
+          data: this.keshidan ?. x,
         },
         yAxis: {
           type: "value",
@@ -99,7 +100,7 @@ export default {
         },
         series: [
           {
-            data: this.chart ?. y,
+            data: this.keshidan ?. y,
             type: "bar",
             barWidth: 12,
             showBackground: true,
@@ -117,6 +118,7 @@ export default {
 <style lang="scss" scoped>
 .keshifenxi {
   width: 920px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

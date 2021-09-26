@@ -1,22 +1,21 @@
 <template>
   <div class="screen-box">
     <Keshi :renyuan="firstList" :keshidan="secondList" :yaopin="thirdList"></Keshi>
-    <mapDot></mapDot>
+    <mapDot @select="select"></mapDot>
     <div class="bottom-box">
       <div class="bottom-item" v-for="(item, index) in fourthList" :key="index">
         <p class="number">{{item.number}}</p>
         <p class="name">{{item.name}}</p>
       </div>
     </div>
-    <huanzhe :renyuan="fifthList" :keshidan="sixthList" :yaopin="thirdList"></huanzhe>
-    
+    <huanZhe :renyuan="fifthList" :keshidan="sixthList" :roseData="huanzheList"></huanZhe>
   </div>
 </template>
 <script>
 import { utilFun } from "../lib/util";
 import mapDot from "../components/map_dot.vue";
 import Keshi from "../components/keshifenxi/keshifenxi.vue";
-import huanzhe from "../components/huanzhefenxi/huanzhefenxi.vue";
+import huanZhe  from "../components/huanzhefenxi/huanzhefenxi.vue";
 import _ from "lodash";
 import moment from 'moment';
 
@@ -24,12 +23,13 @@ export default {
   components: {
     mapDot,
     Keshi,
-    huanzhe
+    huanZhe 
   },
 
   data() {
     return {
-      dateList: {},
+      unit: '', // 默认单位
+      dateList: {}, // 所有数据
       firstList: [], // 各科室接诊人员统计
       secondList: { x: [], y: [] }, // 各科室开单情况
       thirdList: [], // 各科室药品开单情况
@@ -43,21 +43,41 @@ export default {
         {key:'diagnosticTimes',name:'接诊数量'},
         {key:'time',name:'接诊次数'},
         {key:'number',name:'用药总量'}
-        ]
+      ],
+      huanzheList: {
+        rose1: [],
+        rose2: [],
+        rose3: [],
+        rose4: []
+      }
     };
   },
-  mounted() {
-    this.inits();
+  created(){
+    this.init('')
   },
   methods: {
-    inits() {
-      this.dateList = utilFun.initList("南京医院");
+    init(val){
+      utilFun.getXLSXData().then((result) => {
+      this.dateList = utilFun.initList(val, result[0]); 
+    }).catch((error) => {
+      console.log(error)
+    }).then(() => {
+      this.inits(); 
+    })
+    },
+    inits(val) {
+      
       this.getFirst(this.dateList.visitRecordList,'department')
       this.getSecond(this.dateList.prescriptionDetailsList, "billingDepartment");
       this.getThird(this.dateList.prescriptionDetailsList);
       this.getFourth()
-      this.getFifth(this.dateList.prescriptionDetailsList);
+      this.getFifth();
       this.getSixth(this.dateList.diagnosticRecordList, 'diagnostic');
+      this.getRoseData()
+    },
+    select(val){
+      console.log('', val)
+      this.inits(val)
     },
    getFirst(list, keyname) {
       this.firstList = utilFun.groupList(list, keyname);
@@ -66,6 +86,7 @@ export default {
       let arr = utilFun.groupList(list, keyname);
       this.secondList.x = this.getXYData(arr, 'name');
       this.secondList.y = this.getXYData(arr, 'data', true);
+      console.log(this.secondList)
     },
     getThird(list) {
       let arr = this.forGroup(list);
@@ -142,6 +163,43 @@ export default {
       return list.map(item => {
         return isSum ? 0 || item[keyname].length : item[keyname]
       })
+    },
+      getSeventh(list) {
+      // this.huanzheList.rose1 = this.getXYData(this.dateList.visitRecordList,'isRecruit');
+      // this.huanzheList.rose2 = this.getXYData(this.dateList.visitRecordList,'iSInitial');
+      // this.huanzheList.rose3 = this.getXYData(this.dateList.visitRecordList,'management');
+      // this.huanzheList.rose4 = this.getXYData(this.dateList.visitRecordList,'state');
+      const keyList = ['isRecruit','iSInitial','management','state']
+      for (const iterator of keyList) {
+        this.getRoseData(list, iterator)        
+      }
+    },
+    getRoseData(list, keyname){
+      // let arr = this.getXYData(list,keyname);
+      let arr = [1,2,3,1,4,1,2,1,1,2,3,2];
+      let setArr = new Set(arr);
+      const add1 = (item,iterator) => {
+        let obj = arr.filter(function (item) {
+          return item == iterator;
+        })
+        return obj.length;
+      }
+      const add = (setArr, arr) => {
+        let sum = []
+        for (const iterator of setArr) {
+         sum.push(this.add1(item,iterator))
+        }
+        return sum
+      }
+      let obj = {
+        name:  setArr,
+        value: add(setArr, arr),
+        itemStyle: {
+          borderRadius: 8,
+          color: "rgba(134, 228, 255, 1)"
+        },
+      }
+         return obj   
     }
   },
 };

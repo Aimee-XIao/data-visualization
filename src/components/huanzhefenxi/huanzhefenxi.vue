@@ -19,7 +19,7 @@
 </template>
 <script>
 export default {
-  props: ["renyuan", "keshidan", "yaopin"],
+  props: ["renyuan", "keshidan", "roseData"],
   data() {
     return {
       arr: {},
@@ -28,20 +28,20 @@ export default {
       chart: [],
       zhenChart: null,
       huanzheChart: null,
-      huanzheList: {},
+      huanzheLists: {},
     };
   },
 
   mounted() {
     this.$nextTick(() => {
       this.arr = this.renyuan;
-      this.huanzheList = this.yaopin;
+      this.huanzheLists = this.roseData;
       this.chart = this.keshidan;
       this.arr && this.initchart();
       this.chart && this.initZhen();
-      console.log("---------", this.chart);
-      //   this.huanzheList && this.initHuan()
-      this.initHuan();
+      console.log("---------", this.roseData);
+      this.getPieData1();
+      this.huanzheLists && this.initHuan();
     });
   },
   methods: {
@@ -52,6 +52,10 @@ export default {
           type: "category",
           boundaryGap: false,
           data: this.arr?.x,
+        },
+        grid: {
+          left: "3%",
+          right: 0,
         },
         yAxis: {
           type: "value",
@@ -65,10 +69,8 @@ export default {
             show: false,
           },
           splitLine: {
-             color: 'rgba(0, 188, 244, 0.5)'
+            color: "rgba(0, 188, 244, 0.5)",
           },
-          
-          
         },
         series: [
           {
@@ -140,6 +142,92 @@ export default {
         ],
       });
     },
+    getPieData1() {
+      let acount
+      let arr = []
+      for(let v of this.huanzheLists.rose1) {
+        console.log('99999999', v.data.length)
+        acount += v.data.length - 0
+      }
+      
+      for (let v of this.huanzheLists.rose1) {
+        let color;
+        let obj = {
+          value: "",
+          name: "rose 1",
+          itemStyle: {
+            borderRadius: 8,
+            color: color,
+          },
+        };
+        if (v.name == "N") {
+          color = "rgba(134, 228, 255, 1)";
+          obj = {
+            value: v.data ? v.data.length / acount * 100: 0,
+            name: "rose 1",
+            itemStyle: {
+              borderRadius: 8,
+              color: color,
+            },
+          };
+          arr.push(obj);
+        } else {
+          color = "rgba(25, 100, 150, 1)";
+          obj = {
+            value: v.data ? v.data.length / acount * 100: 0,
+            name: "rose 1",
+            itemStyle: {
+              borderRadius: 8,
+              color: color,
+            },
+          };
+          arr.push(obj);
+        }
+      }
+      return arr;
+    },
+     getPieData2() {
+      let arr = [];
+      let acount
+      for(let v of this.huanzheLists.rose1) {
+        acount += v.data.length
+      }
+      for (let v of this.huanzheLists.rose1) {
+        let color;
+        let obj = {
+          value: "",
+          name: "rose 1",
+          itemStyle: {
+            borderRadius: 8,
+            color: color,
+          },
+        };
+        if (v.name == "N") {
+          color = "rgba(134, 228, 255, 1)";
+          obj = {
+            value: v.data ? v.data.length / acount * 100: 0,
+            name: "rose 1",
+            itemStyle: {
+              borderRadius: 8,
+              color: color,
+            },
+          };
+          arr.push(obj);
+        } else {
+          color = "rgba(25, 100, 150, 1)";
+          obj = {
+            value: v.data ? v.data.length / acount * 100: 0,
+            name: "rose 1",
+            itemStyle: {
+              borderRadius: 8,
+              color: color,
+            },
+          };
+          arr.push(obj);
+        }
+      }
+      return arr;
+    },
     initHuan() {
       this.huanzheChart = this.$echarts.init(
         document.getElementById("huanzhe")
@@ -148,6 +236,10 @@ export default {
         tooltip: {
           trigger: "item",
           formatter: "{a} <br/>{b} : {c} ({d}%)",
+        },
+        grid: {
+          left: "3%",
+          right: 0,
         },
         legend: {
           left: "center",
@@ -182,40 +274,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-            data: [
-              {
-                value: 30,
-                name: "rose 1",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(134, 228, 255, 1)",
-                },
-              },
-              {
-                value: 28,
-                name: "rose 2",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(25, 100, 150, 1)",
-                },
-              },
-              {
-                value: 26,
-                name: "rose 3",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(25, 150, 200, 1)",
-                },
-              },
-              {
-                value: 26,
-                name: "rose 3",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(25, 175, 225, 1)",
-                },
-              },
-            ],
+            data: this.getPieData1(),
           },
           {
             name: "Area Mode",
@@ -226,32 +285,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-            data: [
-              {
-                value: 30,
-                name: "rose 1",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(134, 228, 255, 1)",
-                },
-              },
-              {
-                value: 28,
-                name: "rose 2",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(25, 100, 150, 1)",
-                },
-              },
-              {
-                value: 26,
-                name: "rose 3",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(25, 150, 200, 1)",
-                },
-              },
-            ],
+            data: this.getPieData2()
           },
           {
             name: "Area Mode",
@@ -262,32 +296,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-            data: [
-              {
-                value: 30,
-                name: "rose 1",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(134, 228, 255, 1)",
-                },
-              },
-              {
-                value: 28,
-                name: "rose 2",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(25, 100, 150, 1)",
-                },
-              },
-              {
-                value: 26,
-                name: "rose 3",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(25, 150, 200, 1)",
-                },
-              },
-            ],
+           data: this.getPieData1()
           },
           {
             name: "Area Mode",
@@ -298,32 +307,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-            data: [
-              {
-                value: 30,
-                name: "rose 1",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(134, 228, 255, 1)",
-                },
-              },
-              {
-                value: 28,
-                name: "rose 2",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(25, 100, 150, 1)",
-                },
-              },
-              {
-                value: 26,
-                name: "rose 3",
-                itemStyle: {
-                  borderRadius: 8,
-                  color: "rgba(25, 150, 200, 1)",
-                },
-              },
-            ],
+            data: this.getPieData1()
           },
         ],
       });

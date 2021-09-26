@@ -1,7 +1,5 @@
 /**
  * @description:  诊断记录
- * 数据量  dataNum
- * 字段名称name
  * 编号 id
  * 单位 unit
  * 诊断编号 diagnosticNumber
@@ -18,7 +16,6 @@ export const diagnosticRecord = [
   {
     id: 125445,
     unit: "南京医院",
-    dataNum: 12,
     name: "阿莫西林",
     diagnosticNumber: 1254,
     diagnostic: "头痛",

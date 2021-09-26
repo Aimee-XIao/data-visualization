@@ -32,11 +32,9 @@ export default {
 
   mounted() {
     this.$nextTick(() => {
-      this.huanzheLists = this.roseData;
       this.renyuan && this.initchart();
       this.keshidan && this.initZhen();
-      this.getPieData1();
-      this.huanzheLists && this.initHuan();
+      this.roseData && this.initHuan();
     });
   },
   methods: {
@@ -147,90 +145,6 @@ export default {
         ],
       });
     },
-    getPieData1() {
-      let acount
-      let arr = []
-      for(let v of this.huanzheLists.rose1) {
-        acount += v.data.length - 0
-      } 
-      for (let v of this.huanzheLists.rose1) {
-        let color;
-        let obj = {
-          value: "",
-          name: "rose 1",
-          itemStyle: {
-            borderRadius: 8,
-            color: color,
-          },
-        };
-        if (v.name == "N") {
-          color = "rgba(134, 228, 255, 1)";
-          obj = {
-            value: v.data ? v.data.length / acount * 100: 0,
-            name: "rose 1",
-            itemStyle: {
-              borderRadius: 8,
-              color: color,
-            },
-          };
-          arr.push(obj);
-        } else {
-          color = "rgba(25, 100, 150, 1)";
-          obj = {
-            value: v.data ? v.data.length / acount * 100: 0,
-            name: "rose 1",
-            itemStyle: {
-              borderRadius: 8,
-              color: color,
-            },
-          };
-          arr.push(obj);
-        }
-      }
-      return arr;
-    },
-     getPieData2() {
-      let arr = [];
-      let acount
-      for(let v of this.huanzheLists.rose1) {
-        acount += v.data.length
-      }
-      for (let v of this.huanzheLists.rose1) {
-        let color;
-        let obj = {
-          value: "",
-          name: "rose 1",
-          itemStyle: {
-            borderRadius: 8,
-            color: color,
-          },
-        };
-        if (v.name == "N") {
-          color = "rgba(134, 228, 255, 1)";
-          obj = {
-            value: v.data ? v.data.length / acount * 100: 0,
-            name: "rose 1",
-            itemStyle: {
-              borderRadius: 8,
-              color: color,
-            },
-          };
-          arr.push(obj);
-        } else {
-          color = "rgba(25, 100, 150, 1)";
-          obj = {
-            value: v.data ? v.data.length / acount * 100: 0,
-            name: "rose 1",
-            itemStyle: {
-              borderRadius: 8,
-              color: color,
-            },
-          };
-          arr.push(obj);
-        }
-      }
-      return arr;
-    },
     initHuan() {
       this.huanzheChart = this.$echarts.init(
         document.getElementById("huanzhe")
@@ -268,7 +182,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-            data: this.getPieData1(),
+            data: this.roseData.rose1,
           },
           {
             name: "Area Mode",
@@ -279,7 +193,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-            data: this.getPieData2()
+            data:  this.roseData.rose2
           },
           {
             name: "Area Mode",
@@ -290,7 +204,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-           data: this.getPieData1()
+           data:  this.roseData.rose3
           },
           {
             name: "Area Mode",
@@ -301,7 +215,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-            data: this.getPieData1()
+            data: this.roseData.rose4
           },
         ],
       });

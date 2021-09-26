@@ -5,8 +5,12 @@
       <div class="renyuan">
         <div class="renyuan-title">各科室接诊人员统计</div>
         <div class="renyuan-box">
-          <div v-for="(item, index) in renyuan" class="renyuan-item" :key="index">
-            <p class="number">{{ item.data.length }}</p>
+          <div
+            v-for="(item, index) in renyuan"
+            class="renyuan-item"
+            :key="index"
+          >
+            <p class="number">{{ item.number }}</p>
             <p class="name">{{ item.name }}</p>
           </div>
         </div>
@@ -25,21 +29,26 @@
             <p class="yaopinming">药品名称</p>
             <p class="yaopinshu">药品数量</p>
           </div>
-          <div class="item-box">
-            <div v-for="(ite, ind) in yaopinList" class="item" :key="ind">
+          <vue-seamless-scroll
+            :data="yaopin"
+            class="item-box"
+            :class-option="classOption"
+          >
+            <div v-for="(ite, ind) in yaopin" class="item" :key="ind">
               <p class="xuhao">{{ ind + 1 }}</p>
               <p class="keshiming">{{ ite.billingDepartment }}</p>
               <p class="yaopinlei">{{ ite.drugType }}</p>
               <p class="yaopinming">{{ ite.drugName }}</p>
               <p class="yaopinshu">{{ ite.number }}</p>
             </div>
-          </div>
+          </vue-seamless-scroll>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import vueSeamlessScroll from "vue-seamless-scroll";
 export default {
   props: ["renyuan", "keshidan", "yaopin"],
   data() {
@@ -73,6 +82,24 @@ export default {
         ],
       },
     };
+  },
+  components: {
+    //组件
+    vueSeamlessScroll,
+  },
+  computed: {
+    classOption() {
+      return {
+        step: 0.2, // 数值越大速度滚动越快
+        limitMoveNum: 2, // 开始无缝滚动的数据量 this.dataList.length
+        hoverStop: true, // 是否开启鼠标悬停stop
+        direction: 1, // 0向下 1向上 2向左 3向右
+        openWatch: true, // 开启数据实时监控刷新dom
+        singleHeight: 0, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction => 0/1
+        singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction => 2/3
+        waitTime: 1000, // 单步运动停止的时间(默认值1000ms)
+      };
+    },
   },
 
   mounted() {
@@ -122,7 +149,7 @@ export default {
         },
         series: [
           {
-            data: this.keshidan ?.y,
+            data: this.keshidan?.y,
             type: "bar",
             barWidth: 12,
             showBackground: true,
@@ -183,7 +210,7 @@ export default {
         margin-top: 20px;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
         .renyuan-item {
           width: 124px;
@@ -202,11 +229,15 @@ export default {
             margin-top: 40px;
           }
           .name {
+            padding: 0 2px;
             font-size: 24px;
             font-family: FZLanTingHei-R-GBK;
             font-weight: 400;
             color: #00bcf4;
             line-height: 48px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
         }
       }
@@ -217,7 +248,7 @@ export default {
       align-items: flex-start;
       margin-top: 80px;
       .renyuan-title {
-         width: 500px;
+        width: 500px;
         height: 60px;
         padding-left: 36px;
         text-align: left;
@@ -321,6 +352,7 @@ export default {
         }
         .item-box {
           width: 100%;
+          height: 100%;
           display: flex;
           flex-direction: column;
           height: 500px;
@@ -393,32 +425,6 @@ export default {
               text-align: left;
             }
           }
-        }
-        .item-box::-webkit-scrollbar {
-          /*滚动条整体样式*/
-          width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
-          height: 1px;
-        }
-        .item-box::-webkit-scrollbar-thumb {
-          /*滚动条里面小方块*/
-          border-radius: 10px;
-          background-color: #00bcf4;
-          background-image: -webkit-linear-gradient(
-            45deg,
-            rgba(0, 188, 244, 0.2) 25%,
-            transparent 25%,
-            transparent 50%,
-            rgba(0, 188, 244, 0.2) 50%,
-            rgba(0, 188, 244, 0.2) 75%,
-            transparent 75%,
-            transparent
-          );
-        }
-        .item-box::-webkit-scrollbar-track {
-          /*滚动条里面轨道*/
-          box-shadow: inset 0 0 5px rgba(0, 188, 244, 0.2);
-          background: rgba(0, 188, 244, 0.2);
-          border-radius: 10px;
         }
       }
     }

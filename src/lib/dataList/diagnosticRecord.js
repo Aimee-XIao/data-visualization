@@ -13,8 +13,7 @@
  * nodecode
  */
 export const diagnosticRecord = [
-  {
-    id: 125445,
+  {id: 125445,
     unit: "南京医院",
     name: "阿莫西林",
     diagnosticNumber: 1254,

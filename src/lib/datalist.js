@@ -373,7 +373,7 @@ export const list1 = [
                     name: '新兵',
                     value: 76320,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                   },
@@ -381,7 +381,7 @@ export const list1 = [
                     name: '老兵',
                     value: 1,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     },
                   }
@@ -391,7 +391,7 @@ export const list1 = [
                     name: '初诊',
                     value: 130660,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -399,7 +399,7 @@ export const list1 = [
                     name: '复诊',
                     value: 10753,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -409,7 +409,7 @@ export const list1 = [
                     name: '门诊处理',
                     value: 11097,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -417,7 +417,7 @@ export const list1 = [
                     name: '住院',
                     value: 55,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 },
@@ -425,48 +425,48 @@ export const list1 = [
                     name: '转诊',
                     value: 4,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 150, 200, 1)"
                     }
                 },
             ],
             rose4: [
                 {
-                    name: '半休',
-                    value: 122,
+                    name: '归队休息',
+                    value: 77151,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
                 {
-                    name: '归队休息',
-                    value: 77151,
+                    name: '半休',
+                    value: 122,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 175, 225, 1)"
                     }
                 },
                 {
-                    name: '全休',
-                    value: 16,
+                    name: '转诊',
+                    value: 3238,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 125, 175, 1)"
                     }
                 },{
                     name: '住院治疗',
                     value: 363,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 150, 200, 1)"
                     },
                 },
                 {
-                    name: '转诊',
-                    value: 3238,
+                    name: '全休',
+                    value: 16,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -547,7 +547,7 @@ export const list2 = [
                     name: '新兵',
                     value: 1,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                   },
@@ -555,7 +555,7 @@ export const list2 = [
                     name: '老兵',
                     value: 14810,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     },
                   }
@@ -565,7 +565,7 @@ export const list2 = [
                     name: '初诊',
                     value: 14520,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -573,7 +573,7 @@ export const list2 = [
                     name: '复诊',
                     value: 1430,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -583,7 +583,7 @@ export const list2 = [
                     name: '门诊处理',
                     value: 4666,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -591,7 +591,7 @@ export const list2 = [
                     name: '住院',
                     value: 29,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 },
@@ -599,7 +599,7 @@ export const list2 = [
                     name: '转诊',
                     value: 1,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 150, 200, 1)"
                     }
                 },
@@ -609,7 +609,7 @@ export const list2 = [
                     name: '半休',
                     value: 0,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -617,7 +617,7 @@ export const list2 = [
                     name: '归队休息',
                     value: 0,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 175, 225, 1)"
                     }
                 },
@@ -625,14 +625,14 @@ export const list2 = [
                     name: '全休',
                     value: 0,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 125, 175, 1)"
                     }
                 },{
                     name: '住院治疗',
                     value: 87,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 150, 200, 1)"
                     },
                 },
@@ -640,7 +640,7 @@ export const list2 = [
                     name: '转诊',
                     value: 24,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -718,7 +718,7 @@ export const list3 = [
                     name: '新兵',
                     value: 0,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                   },
@@ -726,7 +726,7 @@ export const list3 = [
                     name: '老兵',
                     value: 3222,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     },
                   }
@@ -736,7 +736,7 @@ export const list3 = [
                     name: '初诊',
                     value: 4500,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -744,7 +744,7 @@ export const list3 = [
                     name: '复诊',
                     value: 91,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -754,7 +754,7 @@ export const list3 = [
                     name: '门诊处理',
                     value: 1,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -762,7 +762,7 @@ export const list3 = [
                     name: '住院',
                     value: 4655,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 },
@@ -770,7 +770,7 @@ export const list3 = [
                     name: '转诊',
                     value: 0,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 150, 200, 1)"
                     }
                 },
@@ -780,7 +780,7 @@ export const list3 = [
                     name: '半休',
                     value: 122,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -788,7 +788,7 @@ export const list3 = [
                     name: '归队休息',
                     value: 0,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 175, 225, 1)"
                     }
                 },
@@ -796,14 +796,14 @@ export const list3 = [
                     name: '全休',
                     value: 16,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 125, 175, 1)"
                     }
                 },{
                     name: '住院治疗',
                     value: 10,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 150, 200, 1)"
                     },
                 },
@@ -811,7 +811,7 @@ export const list3 = [
                     name: '转诊',
                     value: 2,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -883,7 +883,7 @@ export const list4 = [
                     name: '其他',
                     value: 1278,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                   },
@@ -891,7 +891,7 @@ export const list4 = [
                     name: '老兵',
                     value: 4161,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     },
                   }
@@ -901,7 +901,7 @@ export const list4 = [
                     name: '初诊',
                     value: 4995,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -909,7 +909,7 @@ export const list4 = [
                     name: '复诊',
                     value: 280,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -919,7 +919,7 @@ export const list4 = [
                     name: '门诊处理',
                     value: 2,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -927,7 +927,7 @@ export const list4 = [
                     name: '其他',
                     value: 5437,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -937,7 +937,7 @@ export const list4 = [
                     name: '归队休息',
                     value: 4241,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 175, 225, 1)"
                     }
                 },
@@ -945,7 +945,7 @@ export const list4 = [
                     name: '转诊',
                     value: 262,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1001,7 +1001,7 @@ export const list5 = [
                     name: '其他',
                     value: 20,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                   },
@@ -1009,7 +1009,7 @@ export const list5 = [
                     name: '老兵',
                     value: 2,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     },
                   }
@@ -1019,7 +1019,7 @@ export const list5 = [
                     name: '初诊',
                     value: 7,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1027,7 +1027,7 @@ export const list5 = [
                     name: '复诊',
                     value: 2,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1037,7 +1037,7 @@ export const list5 = [
                     name: '其他',
                     value: 20,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1045,7 +1045,7 @@ export const list5 = [
                     name: '住院',
                     value: 2,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1055,7 +1055,7 @@ export const list5 = [
                     name: '住院治疗',
                     value: 2,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1063,7 +1063,7 @@ export const list5 = [
                     name: '转诊',
                     value: 24,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1139,7 +1139,7 @@ export const list6 = [
                     name: '其他',
                     value: 1776,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                   },
@@ -1147,7 +1147,7 @@ export const list6 = [
                     name: '老兵',
                     value: 2485,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     },
                   }
@@ -1157,7 +1157,7 @@ export const list6 = [
                     name: '初诊',
                     value: 4170,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1165,7 +1165,7 @@ export const list6 = [
                     name: '复诊',
                     value: 14,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1175,7 +1175,7 @@ export const list6 = [
                     name: '门诊处理',
                     value: 3,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1183,7 +1183,7 @@ export const list6 = [
                     name: '其他',
                     value: 4258,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 150, 200, 1)"
                     }
                 },
@@ -1193,7 +1193,7 @@ export const list6 = [
                     name: '归队休息',
                     value: 2543,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1201,14 +1201,14 @@ export const list6 = [
                     name: '全休',
                     value: 1,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 125, 175, 1)"
                     }
                 },{
                     name: '住院治疗',
                     value: 1,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 150, 200, 1)"
                     },
                 },
@@ -1216,7 +1216,7 @@ export const list6 = [
                     name: '转诊',
                     value: 1,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1287,7 +1287,7 @@ export const list7 = [
                     name: '其他',
                     value: 1063,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                   },
@@ -1295,7 +1295,7 @@ export const list7 = [
                     name: '老兵',
                     value: 742,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     },
                   }
@@ -1305,7 +1305,7 @@ export const list7 = [
                     name: '初诊',
                     value: 1570,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1313,7 +1313,7 @@ export const list7 = [
                     name: '复诊',
                     value: 101,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1323,7 +1323,7 @@ export const list7 = [
                     name: '门诊处理',
                     value: 4,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1331,7 +1331,7 @@ export const list7 = [
                     name: '其他',
                     value: 1801,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1341,7 +1341,7 @@ export const list7 = [
                     name: '归队休息',
                     value: 749,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1349,7 +1349,7 @@ export const list7 = [
                     name: '转诊',
                     value: 5,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1420,7 +1420,7 @@ export const list8 = [
                     name: '其他',
                     value: 2454,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                   },
@@ -1428,7 +1428,7 @@ export const list8 = [
                     name: '老兵',
                     value: 3229,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     },
                   }
@@ -1438,7 +1438,7 @@ export const list8 = [
                     name: '初诊',
                     value: 5326,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1446,7 +1446,7 @@ export const list8 = [
                     name: '复诊',
                     value: 96,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1456,7 +1456,7 @@ export const list8 = [
                     name: '门诊处理',
                     value: 4,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1464,7 +1464,7 @@ export const list8 = [
                     name: '其他',
                     value: 5679,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 }
@@ -1474,7 +1474,7 @@ export const list8 = [
                     name: '归队休息',
                     value: 3308,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(134, 228, 255, 1)"
                     },
                 },
@@ -1482,14 +1482,14 @@ export const list8 = [
                     name: '转诊',
                     value: 1,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 100, 150, 1)"
                     }
                 },{
                     name: '住院治疗',
                     value: 6,
                     itemStyle: {
-                      borderRadius: 8,
+                      borderRadius: 1,
                       color: "rgba(25, 150, 200, 1)"
                     },
                 }
@@ -1580,7 +1580,7 @@ export const list9 = [
                   name: '其他',
                   value: 2651,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -1588,7 +1588,7 @@ export const list9 = [
                   name: '老兵',
                   value: 3231,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -1598,7 +1598,7 @@ export const list9 = [
                   name: '初诊',
                   value: 4820,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -1606,7 +1606,7 @@ export const list9 = [
                   name: '复诊',
                   value: 864,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -1616,7 +1616,7 @@ export const list9 = [
                   name: '门诊处理',
                   value: 242,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -1624,7 +1624,7 @@ export const list9 = [
                   name: '其他',
                   value: 5622,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -1634,7 +1634,7 @@ export const list9 = [
                 name: '半休',
                 value: 4,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(134, 228, 255, 1)"
                 },
             },
@@ -1642,14 +1642,14 @@ export const list9 = [
                 name: '归队休息',
                 value: 3243,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 175, 225, 1)"
                 }
             },{
                 name: '住院治疗',
                 value: 6,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },
@@ -1657,7 +1657,7 @@ export const list9 = [
                 name: '转诊',
                 value: 795,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 100, 150, 1)"
                 }
             },
@@ -1665,7 +1665,7 @@ export const list9 = [
                 name: '全休',
                 value: 3,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 125, 175, 1)"
                 }
             }
@@ -1738,7 +1738,7 @@ export const list10 = [
                   name: '其他',
                   value: 4756,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -1746,7 +1746,7 @@ export const list10 = [
                   name: '老兵',
                   value: 219,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -1756,7 +1756,7 @@ export const list10 = [
                   name: '初诊',
                   value: 3096,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -1764,7 +1764,7 @@ export const list10 = [
                   name: '复诊',
                   value: 1740,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -1774,7 +1774,7 @@ export const list10 = [
                   name: '其他',
                   value: 4795,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -1782,7 +1782,7 @@ export const list10 = [
                   name: '门诊处理',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -1792,7 +1792,7 @@ export const list10 = [
                 name: '归队休息',
                 value: 254,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(134, 228, 255, 1)"
                 },
             },
@@ -1800,7 +1800,7 @@ export const list10 = [
                 name: '转诊',
                 value: 2,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 100, 150, 1)"
                 }
             }
@@ -1872,7 +1872,7 @@ export const list11 = [
                   name: '其他',
                   value: 2635,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -1880,7 +1880,7 @@ export const list11 = [
                   name: '老兵',
                   value: 711,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -1890,7 +1890,7 @@ export const list11 = [
                   name: '初诊',
                   value: 3161,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -1898,7 +1898,7 @@ export const list11 = [
                   name: '复诊',
                   value: 61,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -1908,7 +1908,7 @@ export const list11 = [
                   name: '其他',
                   value: 3346,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -1916,7 +1916,7 @@ export const list11 = [
                   name: '门诊处理',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -1926,7 +1926,7 @@ export const list11 = [
                 name: '归队休息',
                 value: 725,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(134, 228, 255, 1)"
                 },
             },
@@ -1934,7 +1934,7 @@ export const list11 = [
                 name: '住院治疗',
                 value: 3,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 175, 225, 1)"
                 }
             },
@@ -1942,7 +1942,7 @@ export const list11 = [
                 name: '转诊',
                 value: 795,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 100, 150, 1)"
                 }
             }
@@ -2015,7 +2015,7 @@ export const list12 = [
                   name: '新兵',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -2023,7 +2023,7 @@ export const list12 = [
                   name: '老兵',
                   value: 117,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -2033,7 +2033,7 @@ export const list12 = [
                   name: '初诊',
                   value: 3791,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2041,7 +2041,7 @@ export const list12 = [
                   name: '复诊',
                   value: 19,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2051,7 +2051,7 @@ export const list12 = [
                   name: '门诊处理',
                   value: 27,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2059,7 +2059,7 @@ export const list12 = [
                   name: '其他',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2069,7 +2069,7 @@ export const list12 = [
                 name: '归队休息',
                 value: 121,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(134, 228, 255, 1)"
                 },
             },
@@ -2077,7 +2077,7 @@ export const list12 = [
                 name: '半休',
                 value: 1,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 100, 150, 1)"
                 }
             }
@@ -2150,7 +2150,7 @@ export const list13 = [
                   name: '新兵',
                   value: 366,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -2158,7 +2158,7 @@ export const list13 = [
                   name: '老兵',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -2168,7 +2168,7 @@ export const list13 = [
                   name: '初诊',
                   value: 1261,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2176,7 +2176,7 @@ export const list13 = [
                   name: '复诊',
                   value: 17,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2186,7 +2186,7 @@ export const list13 = [
                   name: '门诊处理',
                   value: 11,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2194,7 +2194,7 @@ export const list13 = [
                   name: '其他',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2204,14 +2204,14 @@ export const list13 = [
                 name: '住院治疗',
                 value: 1,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },{
               name: '归队休息',
               value: 369,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -2219,7 +2219,7 @@ export const list13 = [
               name: '转诊',
               value: 1,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           }
@@ -2290,7 +2290,7 @@ export const list14 = [
                   name: '老兵',
                   value: 1182,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -2298,7 +2298,7 @@ export const list14 = [
                   name: '新兵',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -2308,7 +2308,7 @@ export const list14 = [
                   name: '初诊',
                   value: 3336,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2316,7 +2316,7 @@ export const list14 = [
                   name: '复诊',
                   value: 336,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2326,7 +2326,7 @@ export const list14 = [
                   name: '门诊处理',
                   value: 106,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2334,7 +2334,7 @@ export const list14 = [
                   name: '其他',
                   value: 3696,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2344,14 +2344,14 @@ export const list14 = [
                 name: '归队休息',
                 value: 1189,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },{
               name: '住院治疗',
               value: 10,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           }
@@ -2442,7 +2442,7 @@ export const list15 = [
                   name: '老兵',
                   value: 3573,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -2450,7 +2450,7 @@ export const list15 = [
                   name: '新兵',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -2460,7 +2460,7 @@ export const list15 = [
                   name: '初诊',
                   value: 5673,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2468,7 +2468,7 @@ export const list15 = [
                   name: '复诊',
                   value: 11,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2478,7 +2478,7 @@ export const list15 = [
                   name: '其他',
                   value: 5916,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2486,7 +2486,7 @@ export const list15 = [
                   name: '门诊处理',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2496,7 +2496,7 @@ export const list15 = [
                 name: '归队休息',
                 value: 3607,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },
@@ -2504,7 +2504,7 @@ export const list15 = [
               name: '转诊',
               value: 1,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           }
@@ -2577,7 +2577,7 @@ export const list16 = [
                   name: '其他',
                   value: 1654,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -2585,7 +2585,7 @@ export const list16 = [
                   name: '老兵',
                   value: 4991,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -2595,7 +2595,7 @@ export const list16 = [
                   name: '初诊',
                   value: 5412,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2603,7 +2603,7 @@ export const list16 = [
                   name: '复诊',
                   value: 877 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2613,7 +2613,7 @@ export const list16 = [
                   name: '其他',
                   value: 4087,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2621,7 +2621,7 @@ export const list16 = [
                 name: '门诊处理',
                 value: 11,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },
@@ -2629,7 +2629,7 @@ export const list16 = [
               name: '住院',
               value: 11,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           }
@@ -2639,7 +2639,7 @@ export const list16 = [
               name: '其他',
               value: 992,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -2647,14 +2647,14 @@ export const list16 = [
               name: '归队休息',
               value: 5060,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },{
               name: '住院治疗',
               value: 36,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           },
@@ -2662,7 +2662,7 @@ export const list16 = [
               name: '转诊',
               value: 557,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           }
@@ -2733,7 +2733,7 @@ export const list17 = [
                   name: '老兵',
                   value: 6022,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -2741,7 +2741,7 @@ export const list17 = [
                   name: '新兵',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -2751,7 +2751,7 @@ export const list17 = [
                   name: '初诊',
                   value: 6165,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2759,7 +2759,7 @@ export const list17 = [
                   name: '复诊',
                   value: 123,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2769,7 +2769,7 @@ export const list17 = [
                   name: '门诊处理',
                   value: 7,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2777,7 +2777,7 @@ export const list17 = [
                   name: '其他',
                   value: 6524,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2787,14 +2787,14 @@ export const list17 = [
                 name: '归队休息',
                 value: 6058,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },{
               name: '住院治疗',
               value: 4,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               }
           }
@@ -2867,7 +2867,7 @@ export const list18 = [
                   name: '其他',
                   value: 921,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -2875,7 +2875,7 @@ export const list18 = [
                   name: '老兵',
                   value: 1870,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -2885,7 +2885,7 @@ export const list18 = [
                   name: '初诊',
                   value: 2609,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2893,7 +2893,7 @@ export const list18 = [
                   name: '复诊',
                   value: 44 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -2903,7 +2903,7 @@ export const list18 = [
                   name: '其他',
                   value: 2573,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -2911,7 +2911,7 @@ export const list18 = [
                 name: '门诊处理',
                 value: 218,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             }
@@ -2921,7 +2921,7 @@ export const list18 = [
               name: '其他',
               value: 892,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -2929,14 +2929,14 @@ export const list18 = [
               name: '归队休息',
               value: 1884,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },{
               name: '住院治疗',
               value: 9,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           },
@@ -2944,7 +2944,7 @@ export const list18 = [
               name: '转诊',
               value: 6,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           }
@@ -3018,7 +3018,7 @@ export const list19 = [
                   name: '其他',
                   value: 2401,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -3026,7 +3026,7 @@ export const list19 = [
                   name: '老兵',
                   value: 2232,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -3036,7 +3036,7 @@ export const list19 = [
                   name: '初诊',
                   value: 4255,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3044,7 +3044,7 @@ export const list19 = [
                   name: '复诊',
                   value: 32 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3054,7 +3054,7 @@ export const list19 = [
                   name: '其他',
                   value: 3747,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3062,7 +3062,7 @@ export const list19 = [
                 name: '门诊处理',
                 value: 886,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             }
@@ -3072,7 +3072,7 @@ export const list19 = [
               name: '其他',
               value: 2319,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -3080,7 +3080,7 @@ export const list19 = [
             name: '归队休息',
               value: 2284,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -3088,7 +3088,7 @@ export const list19 = [
               name: '转诊',
               value: 14,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           },
@@ -3096,7 +3096,7 @@ export const list19 = [
             name: '住院治疗',
             value: 16,
             itemStyle: {
-              borderRadius: 8,
+              borderRadius: 1,
               color: "rgba(25, 150, 200, 1)"
             },
         }
@@ -3169,7 +3169,7 @@ export const list20 = [
                   name: '其他',
                   value: 1798,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -3177,7 +3177,7 @@ export const list20 = [
                   name: '老兵',
                   value: 1980,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -3187,7 +3187,7 @@ export const list20 = [
                   name: '初诊',
                   value: 2692,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3195,7 +3195,7 @@ export const list20 = [
                   name: '复诊',
                   value: 868 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3205,7 +3205,7 @@ export const list20 = [
                   name: '其他',
                   value: 3774,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3213,7 +3213,7 @@ export const list20 = [
                   name: '门诊处理',
                   value: 4,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3223,7 +3223,7 @@ export const list20 = [
               name: '其他',
               value: 1763,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -3231,7 +3231,7 @@ export const list20 = [
               name: '归队休息',
               value: 2011,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -3239,14 +3239,14 @@ export const list20 = [
               name: '转诊',
               value: 2,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 125, 175, 1)"
               }
           },{
               name: '住院治疗',
               value: 2,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           }
@@ -3319,7 +3319,7 @@ export const list21 = [
                   name: '老兵',
                   value: 17,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -3327,7 +3327,7 @@ export const list21 = [
                   name: '新兵',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -3337,7 +3337,7 @@ export const list21 = [
                   name: '初诊',
                   value: 5746,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3345,7 +3345,7 @@ export const list21 = [
                   name: '复诊',
                   value: 148,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3355,7 +3355,7 @@ export const list21 = [
                   name: '门诊处理',
                   value: 6170,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3363,7 +3363,7 @@ export const list21 = [
                   name: '其他',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3373,7 +3373,7 @@ export const list21 = [
                 name: '归队休息',
                 value: 19,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(134, 228, 255, 1)"
                 },
             },
@@ -3381,7 +3381,7 @@ export const list21 = [
                 name: '其他',
                 value: 0,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 100, 150, 1)"
                 }
             }
@@ -3435,7 +3435,7 @@ export const list22 = [
                   name: '其他',
                   value: 3,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -3443,7 +3443,7 @@ export const list22 = [
                   name: '老兵',
                   value: 3,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -3453,7 +3453,7 @@ export const list22 = [
                   name: '初诊',
                   value: 6,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3461,7 +3461,7 @@ export const list22 = [
                   name: '复诊',
                   value: 0 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3471,7 +3471,7 @@ export const list22 = [
                   name: '其他',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3479,7 +3479,7 @@ export const list22 = [
                 name: '门诊处理',
                 value: 2,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             }
@@ -3489,7 +3489,7 @@ export const list22 = [
               name: '其他',
               value: 3,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -3497,7 +3497,7 @@ export const list22 = [
               name: '归队休息',
               value: 3,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           }
@@ -3590,7 +3590,7 @@ export const list23 = [
                   name: '其他',
                   value: 514,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -3598,7 +3598,7 @@ export const list23 = [
                   name: '老兵',
                   value: 1273,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -3608,7 +3608,7 @@ export const list23 = [
                   name: '初诊',
                   value: 4126,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3616,7 +3616,7 @@ export const list23 = [
                   name: '复诊',
                   value: 138 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3626,7 +3626,7 @@ export const list23 = [
                   name: '其他',
                   value: 4385,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3634,7 +3634,7 @@ export const list23 = [
                   name: '门诊处理',
                   value: 21,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3644,7 +3644,7 @@ export const list23 = [
               name: '其他',
               value: 3117,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -3652,7 +3652,7 @@ export const list23 = [
               name: '归队休息',
               value: 1283,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -3660,14 +3660,14 @@ export const list23 = [
               name: '转诊',
               value: 1,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 125, 175, 1)"
               }
           },{
               name: '住院治疗',
               value: 5,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           }
@@ -3740,7 +3740,7 @@ export const list24 = [
                   name: '其他',
                   value: 126,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -3748,7 +3748,7 @@ export const list24 = [
                   name: '老兵',
                   value: 1176,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -3758,7 +3758,7 @@ export const list24 = [
                   name: '初诊',
                   value: 1010,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3766,7 +3766,7 @@ export const list24 = [
                   name: '复诊',
                   value: 255 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3776,7 +3776,7 @@ export const list24 = [
                   name: '其他',
                   value: 1302,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3784,7 +3784,7 @@ export const list24 = [
                 name: '门诊处理',
                 value: 0,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             }
@@ -3794,7 +3794,7 @@ export const list24 = [
               name: '其他',
               value: 109,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -3802,14 +3802,14 @@ export const list24 = [
               name: '归队休息',
               value: 1183,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },{
               name: '住院治疗',
               value: 10,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           }
@@ -3881,7 +3881,7 @@ export const list25 = [
                   name: '新兵',
                   value: 514,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -3889,7 +3889,7 @@ export const list25 = [
                   name: '老兵',
                   value: 1781,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -3899,7 +3899,7 @@ export const list25 = [
                   name: '初诊',
                   value: 2086,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3907,7 +3907,7 @@ export const list25 = [
                   name: '复诊',
                   value: 120 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3917,7 +3917,7 @@ export const list25 = [
                   name: '其他',
                   value: 2295,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -3925,7 +3925,7 @@ export const list25 = [
                   name: '门诊处理',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -3935,7 +3935,7 @@ export const list25 = [
               name: '其他',
               value: 279,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -3943,7 +3943,7 @@ export const list25 = [
               name: '归队休息',
               value: 1767,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -3951,14 +3951,14 @@ export const list25 = [
               name: '转诊',
               value: 211,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 125, 175, 1)"
               }
           },{
               name: '住院治疗',
               value: 38,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           }
@@ -4031,7 +4031,7 @@ export const list26 = [
                   name: '其他',
                   value: 1579,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -4039,7 +4039,7 @@ export const list26 = [
                   name: '老兵',
                   value: 1295,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -4049,7 +4049,7 @@ export const list26 = [
                   name: '初诊',
                   value: 2493,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4057,7 +4057,7 @@ export const list26 = [
                   name: '复诊',
                   value: 176 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -4067,7 +4067,7 @@ export const list26 = [
                   name: '其他',
                   value: 2692,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4075,7 +4075,7 @@ export const list26 = [
                   name: '门诊处理',
                   value: 182,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -4085,7 +4085,7 @@ export const list26 = [
               name: '其他',
               value: 1574,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -4093,7 +4093,7 @@ export const list26 = [
               name: '归队休息',
               value: 1312,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -4101,14 +4101,14 @@ export const list26 = [
               name: '转诊',
               value: 1,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 125, 175, 1)"
               }
           },{
               name: '住院治疗',
               value: 14,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           }
@@ -4181,7 +4181,7 @@ export const list27 = [
                   name: '其他',
                   value: 2370,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -4189,7 +4189,7 @@ export const list27 = [
                   name: '老兵',
                   value: 19,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -4199,7 +4199,7 @@ export const list27 = [
                   name: '初诊',
                   value: 1679,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4207,7 +4207,7 @@ export const list27 = [
                   name: '复诊',
                   value: 593 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -4217,7 +4217,7 @@ export const list27 = [
                   name: '其他',
                   value: 2375,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4225,7 +4225,7 @@ export const list27 = [
                   name: '门诊处理',
                   value: 14,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -4235,7 +4235,7 @@ export const list27 = [
               name: '其他',
               value: 2366,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -4243,7 +4243,7 @@ export const list27 = [
               name: '归队休息',
               value: 23,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           }
@@ -4316,7 +4316,7 @@ export const list28 = [
                   name: '其他',
                   value: 2060,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -4324,7 +4324,7 @@ export const list28 = [
                   name: '老兵',
                   value: 518,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -4334,7 +4334,7 @@ export const list28 = [
                   name: '初诊',
                   value: 2411,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4342,7 +4342,7 @@ export const list28 = [
                   name: '复诊',
                   value: 45 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -4352,7 +4352,7 @@ export const list28 = [
                   name: '其他',
                   value: 2578,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4360,7 +4360,7 @@ export const list28 = [
                 name: '门诊处理',
                 value: 0,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             }
@@ -4370,7 +4370,7 @@ export const list28 = [
               name: '其他',
               value: 2052,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -4378,14 +4378,14 @@ export const list28 = [
               name: '归队休息',
               value: 525,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },{
               name: '住院治疗',
               value: 1,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           }
@@ -4458,7 +4458,7 @@ export const list29 = [
                   name: '其他',
                   value: 644,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -4466,7 +4466,7 @@ export const list29 = [
                   name: '老兵',
                   value: 1168,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -4476,7 +4476,7 @@ export const list29 = [
                   name: '初诊',
                   value: 1504,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4484,7 +4484,7 @@ export const list29 = [
                   name: '复诊',
                   value: 196 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -4494,7 +4494,7 @@ export const list29 = [
                   name: '其他',
                   value: 1071,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4502,14 +4502,14 @@ export const list29 = [
                 name: '门诊处理',
                 value: 733,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },{
               name: '住院',
               value: 6,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               },
           },
@@ -4517,7 +4517,7 @@ export const list29 = [
               name: '转诊',
               value: 2,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           }
@@ -4527,7 +4527,7 @@ export const list29 = [
               name: '其他',
               value: 185,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -4535,14 +4535,14 @@ export const list29 = [
               name: '归队休息',
               value: 1190,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },{
               name: '住院治疗',
               value: 7,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           },
@@ -4550,7 +4550,7 @@ export const list29 = [
               name: '转诊',
               value: 429,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           }
@@ -4623,7 +4623,7 @@ export const list30 = [
                   name: '其他',
                   value: 2118,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -4631,7 +4631,7 @@ export const list30 = [
                   name: '老兵',
                   value: 486,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -4641,7 +4641,7 @@ export const list30 = [
                   name: '初诊',
                   value: 2429,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4649,7 +4649,7 @@ export const list30 = [
                   name: '复诊',
                   value: 24 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -4659,7 +4659,7 @@ export const list30 = [
                   name: '其他',
                   value: 2598,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4667,7 +4667,7 @@ export const list30 = [
                 name: '门诊处理',
                 value: 5,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },
@@ -4675,7 +4675,7 @@ export const list30 = [
               name: '住院',
               value: 1,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               },
             }
@@ -4685,7 +4685,7 @@ export const list30 = [
               name: '其他',
               value: 2099,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -4693,7 +4693,7 @@ export const list30 = [
             name: '归队休息',
               value: 498,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -4701,7 +4701,7 @@ export const list30 = [
               name: '转诊',
               value: 2,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           },
@@ -4709,7 +4709,7 @@ export const list30 = [
             name: '住院治疗',
             value: 5,
             itemStyle: {
-              borderRadius: 8,
+              borderRadius: 1,
               color: "rgba(25, 150, 200, 1)"
             },
         }
@@ -4784,7 +4784,7 @@ export const list31 = [
                   name: '新兵',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -4792,7 +4792,7 @@ export const list31 = [
                   name: '老兵',
                   value: 2543,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -4802,7 +4802,7 @@ export const list31 = [
                   name: '初诊',
                   value: 4508,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4810,7 +4810,7 @@ export const list31 = [
                   name: '复诊',
                   value: 198,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -4820,7 +4820,7 @@ export const list31 = [
                   name: '门诊处理',
                   value: 14,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4828,7 +4828,7 @@ export const list31 = [
                   name: '其他',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -4838,7 +4838,7 @@ export const list31 = [
                 name: '半休',
                 value: 1,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(134, 228, 255, 1)"
                 },
             },
@@ -4846,14 +4846,14 @@ export const list31 = [
                 name: '归队休息',
                 value: 2583,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 175, 225, 1)"
                 }
             },{
                 name: '住院治疗',
                 value: 21,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },
@@ -4861,7 +4861,7 @@ export const list31 = [
                 name: '转诊',
                 value: 5,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 100, 150, 1)"
                 }
             }
@@ -4934,7 +4934,7 @@ export const list32 = [
                   name: '其他',
                   value: 1717,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -4942,7 +4942,7 @@ export const list32 = [
                   name: '老兵',
                   value: 5802,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -4952,7 +4952,7 @@ export const list32 = [
                   name: '初诊',
                   value: 5771,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4960,7 +4960,7 @@ export const list32 = [
                   name: '复诊',
                   value: 1516 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -4970,7 +4970,7 @@ export const list32 = [
                   name: '其他',
                   value: 7465,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -4978,7 +4978,7 @@ export const list32 = [
                 name: '门诊处理',
                 value: 53,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },
@@ -4986,7 +4986,7 @@ export const list32 = [
                 name: '住院',
                 value: 1,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 175, 225, 1)"
                 }
             }
@@ -4996,7 +4996,7 @@ export const list32 = [
               name: '其他',
               value: 1170,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -5004,7 +5004,7 @@ export const list32 = [
               name: '归队休息',
               value: 5860,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -5012,14 +5012,14 @@ export const list32 = [
               name: '全休',
               value: 6,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 125, 175, 1)"
               }
           },{
               name: '半休',
               value: 4,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           },
@@ -5027,7 +5027,7 @@ export const list32 = [
               name: '转诊',
               value: 29,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           },
@@ -5035,7 +5035,7 @@ export const list32 = [
               name: '住院治疗',
               value: 53,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(0, 188, 244, 1)"
               }
           }
@@ -5108,7 +5108,7 @@ export const list33 = [
                   name: '其他',
                   value: 1413,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -5116,7 +5116,7 @@ export const list33 = [
                   name: '老兵',
                   value: 3,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -5126,7 +5126,7 @@ export const list33 = [
                   name: '初诊',
                   value: 1273,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5134,7 +5134,7 @@ export const list33 = [
                   name: '复诊',
                   value: 51 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -5144,7 +5144,7 @@ export const list33 = [
                   name: '其他',
                   value: 1415,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5152,7 +5152,7 @@ export const list33 = [
                 name: '门诊处理',
                 value: 1,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             }
@@ -5162,7 +5162,7 @@ export const list33 = [
               name: '其他',
               value: 1412,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -5170,7 +5170,7 @@ export const list33 = [
               name: '归队休息',
               value: 4,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           }
@@ -5236,7 +5236,7 @@ export const list34 = [
                   name: '其他',
                   value: 714,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -5244,7 +5244,7 @@ export const list34 = [
                   name: '老兵',
                   value: 1061,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -5254,7 +5254,7 @@ export const list34 = [
                   name: '初诊',
                   value: 1631,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5262,7 +5262,7 @@ export const list34 = [
                   name: '复诊',
                   value: 92 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -5272,7 +5272,7 @@ export const list34 = [
                   name: '其他',
                   value: 1658,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5280,7 +5280,7 @@ export const list34 = [
                 name: '门诊处理',
                 value: 115,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },
@@ -5288,7 +5288,7 @@ export const list34 = [
               name: '住院',
               value: 2,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               },
             }
@@ -5298,7 +5298,7 @@ export const list34 = [
               name: '其他',
               value: 679,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -5306,7 +5306,7 @@ export const list34 = [
             name: '归队休息',
               value: 1087,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -5314,7 +5314,7 @@ export const list34 = [
               name: '转诊',
               value: 5,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           },
@@ -5322,7 +5322,7 @@ export const list34 = [
             name: '住院治疗',
             value: 4,
             itemStyle: {
-              borderRadius: 8,
+              borderRadius: 1,
               color: "rgba(25, 150, 200, 1)"
             },
         }
@@ -5397,7 +5397,7 @@ export const list35 = [
                   name: '新兵',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -5405,7 +5405,7 @@ export const list35 = [
                   name: '老兵',
                   value: 2543,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -5415,7 +5415,7 @@ export const list35 = [
                   name: '初诊',
                   value: 4508,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5423,7 +5423,7 @@ export const list35 = [
                   name: '复诊',
                   value: 198,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -5433,7 +5433,7 @@ export const list35 = [
                   name: '门诊处理',
                   value: 14,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5441,7 +5441,7 @@ export const list35 = [
                   name: '其他',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -5451,7 +5451,7 @@ export const list35 = [
                 name: '半休',
                 value: 1,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(134, 228, 255, 1)"
                 },
             },
@@ -5459,14 +5459,14 @@ export const list35 = [
                 name: '归队休息',
                 value: 2583,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 175, 225, 1)"
                 }
             },{
                 name: '住院治疗',
                 value: 21,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             },
@@ -5474,7 +5474,7 @@ export const list35 = [
                 name: '转诊',
                 value: 5,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 100, 150, 1)"
                 }
             }
@@ -5547,7 +5547,7 @@ export const list36 = [
                   name: '其他',
                   value: 965,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -5555,7 +5555,7 @@ export const list36 = [
                   name: '老兵',
                   value: 1226,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -5565,7 +5565,7 @@ export const list36 = [
                   name: '初诊',
                   value: 2120,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5573,7 +5573,7 @@ export const list36 = [
                   name: '复诊',
                   value: 1 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -5583,7 +5583,7 @@ export const list36 = [
                   name: '其他',
                   value: 1921,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5591,7 +5591,7 @@ export const list36 = [
                   name: '住院',
                   value: 1,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               },
@@ -5599,7 +5599,7 @@ export const list36 = [
                 name: '门诊处理',
                 value: 269,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             }
@@ -5609,7 +5609,7 @@ export const list36 = [
               name: '其他',
               value: 566,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -5617,14 +5617,14 @@ export const list36 = [
               name: '归队休息',
               value: 1254,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },{
               name: '住院治疗',
               value: 6,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           },
@@ -5632,7 +5632,7 @@ export const list36 = [
               name: '转诊',
               value: 365,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           }
@@ -5705,7 +5705,7 @@ export const list37 = [
                   name: '其他',
                   value: 4283,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -5713,7 +5713,7 @@ export const list37 = [
                   name: '老兵',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -5723,7 +5723,7 @@ export const list37 = [
                   name: '初诊',
                   value: 4224,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5731,7 +5731,7 @@ export const list37 = [
                   name: '复诊',
                   value: 5 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -5741,7 +5741,7 @@ export const list37 = [
                   name: '其他',
                   value: 4402,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5749,7 +5749,7 @@ export const list37 = [
                 name: '门诊处理',
                 value: 0,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             }
@@ -5759,7 +5759,7 @@ export const list37 = [
               name: '其他',
               value: 4276,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -5767,7 +5767,7 @@ export const list37 = [
               name: '归队休息',
               value: 124,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -5775,7 +5775,7 @@ export const list37 = [
               name: '转诊',
               value: 2,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           }
@@ -5945,7 +5945,7 @@ export const list38 = [
                   name: '老兵',
                   value: 593,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -5953,7 +5953,7 @@ export const list38 = [
                   name: '其他',
                   value: 2063,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -5963,7 +5963,7 @@ export const list38 = [
                   name: '初诊',
                   value: 2438,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5971,7 +5971,7 @@ export const list38 = [
                   name: '复诊',
                   value: 47,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -5981,7 +5981,7 @@ export const list38 = [
                   name: '其他',
                   value: 2355,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -5989,7 +5989,7 @@ export const list38 = [
                   name: '门诊处理',
                   value: 305,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               },
@@ -5997,7 +5997,7 @@ export const list38 = [
                   name: '住院',
                   value: 1,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 175, 225, 1)"
                   }
               }
@@ -6007,7 +6007,7 @@ export const list38 = [
               name: '其他',
               value: 2037,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -6015,7 +6015,7 @@ export const list38 = [
               name: '归队休息',
               value: 617,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -6023,14 +6023,14 @@ export const list38 = [
               name: '转诊',
               value: 5,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 125, 175, 1)"
               }
           },{
               name: '住院治疗',
               value: 2,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           }
@@ -6085,7 +6085,7 @@ export const list39 = [
                   name: '老兵',
                   value: 8,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -6093,7 +6093,7 @@ export const list39 = [
                   name: '其他',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -6103,7 +6103,7 @@ export const list39 = [
                   name: '初诊',
                   value: 4,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -6111,7 +6111,7 @@ export const list39 = [
                   name: '复诊',
                   value: 1,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -6121,7 +6121,7 @@ export const list39 = [
                   name: '门诊处理',
                   value: 8,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -6129,7 +6129,7 @@ export const list39 = [
                   name: '其他',
                   value: 0,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -6139,7 +6139,7 @@ export const list39 = [
                 name: '归队休息',
                 value: 1,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(134, 228, 255, 1)"
                 },
             },
@@ -6147,7 +6147,7 @@ export const list39 = [
                 name: '转诊',
                 value: 3,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 100, 150, 1)"
                 }
             }
@@ -6220,7 +6220,7 @@ export const list40 = [
                   name: '其他',
                   value: 1304,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -6228,7 +6228,7 @@ export const list40 = [
                   name: '老兵',
                   value: 67,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -6238,7 +6238,7 @@ export const list40 = [
                   name: '初诊',
                   value: 1284,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -6246,7 +6246,7 @@ export const list40 = [
                   name: '复诊',
                   value: 0 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -6256,7 +6256,7 @@ export const list40 = [
                   name: '其他',
                   value: 1371,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -6264,7 +6264,7 @@ export const list40 = [
                 name: '门诊处理',
                 value: 0,
                 itemStyle: {
-                  borderRadius: 8,
+                  borderRadius: 1,
                   color: "rgba(25, 150, 200, 1)"
                 },
             }
@@ -6274,7 +6274,7 @@ export const list40 = [
               name: '其他',
               value: 1294,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -6282,7 +6282,7 @@ export const list40 = [
               name: '归队休息',
               value: 76,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -6290,7 +6290,7 @@ export const list40 = [
               name: '转诊',
               value: 1,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           },
@@ -6298,7 +6298,7 @@ export const list40 = [
               name: '住院治疗',
               value: 53,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(0, 188, 244, 1)"
               }
           }
@@ -6371,7 +6371,7 @@ export const list41 = [
                   name: '其他',
                   value: 439,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
                 },
@@ -6379,7 +6379,7 @@ export const list41 = [
                   name: '老兵',
                   value: 229,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   },
                 }
@@ -6389,7 +6389,7 @@ export const list41 = [
                   name: '初诊',
                   value: 637,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -6397,7 +6397,7 @@ export const list41 = [
                   name: '复诊',
                   value: 3 ,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -6407,7 +6407,7 @@ export const list41 = [
                   name: '其他',
                   value: 667,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(134, 228, 255, 1)"
                   },
               },
@@ -6415,7 +6415,7 @@ export const list41 = [
                   name: '住院',
                   value: 1,
                   itemStyle: {
-                    borderRadius: 8,
+                    borderRadius: 1,
                     color: "rgba(25, 100, 150, 1)"
                   }
               }
@@ -6425,7 +6425,7 @@ export const list41 = [
               name: '其他',
               value: 416,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(134, 228, 255, 1)"
               },
           },
@@ -6433,7 +6433,7 @@ export const list41 = [
               name: '归队休息',
               value: 234,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 175, 225, 1)"
               }
           },
@@ -6441,14 +6441,14 @@ export const list41 = [
               name: '全休',
               value: 1,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 125, 175, 1)"
               }
           },{
               name: '半休',
               value: 2,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 150, 200, 1)"
               },
           },
@@ -6456,7 +6456,7 @@ export const list41 = [
               name: '转诊',
               value: 3,
               itemStyle: {
-                borderRadius: 8,
+                borderRadius: 1,
                 color: "rgba(25, 100, 150, 1)"
               }
           }

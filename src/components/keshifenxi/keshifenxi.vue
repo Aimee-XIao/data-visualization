@@ -184,6 +184,9 @@ export default {
             backgroundStyle: {
               color: "rgba(0, 188, 244, 0.2)",
             },
+            itemStyle: {
+              color: 'rgba(0, 188, 244, 1)'
+            }
           },
         ],
       });

@@ -156,7 +156,7 @@ export default {
             fontSize: 20,
             color: "rgba(0, 188, 244, 1)",
             interval: 0,
-            rotate: 30,
+            rotate: 23,
           },
           splitLine: {
             show: false,
@@ -183,6 +183,9 @@ export default {
             backgroundStyle: {
               color: "rgba(0, 188, 244, 0.2)",
             },
+            itemStyle: {
+              color: 'rgba(0, 188, 244, 1)'
+            }
           },
         ],
       });
@@ -213,7 +216,7 @@ export default {
             left: "15%",
             top: 0,
             text: "患者身份比例",
-            padding: [0, 0, 80, 0],
+            padding: [0, 0, 80, 20],
             textStyle: {
               fontSize: 28,
               fontWeight: "bold",
@@ -222,7 +225,7 @@ export default {
             },
           },
           {
-            left: "75%",
+            left: "67%",
             top: 0,
             text: "初复诊情况",
             textStyle: {
@@ -233,7 +236,7 @@ export default {
             },
           },
           {
-            left: "15%",
+            left: "17%",
             top: "45%",
             text: "患者处置情况",
             textStyle: {
@@ -244,7 +247,7 @@ export default {
             },
           },
           {
-            left: "75%",
+            left: "65%",
             top: "45%",
             text: "患者完成状态",
             textStyle: {
@@ -258,7 +261,7 @@ export default {
 
         label: {
           alignTo: "edge",
-          formatter: "{name|{b}}\n{time|{c} %}",
+          formatter: "{name|{b}}\n{time|{d} %}",
           minMargin: 10,
           edgeDistance: 10,
           lineHeight: 26,
@@ -277,7 +280,7 @@ export default {
             type: "pie",
             radius: [20, 80],
             center: ["25%", "25%"],
-            roseType: "area",
+            roseType: "radius",
             itemStyle: {
               borderRadius: 5,
             },
@@ -288,7 +291,7 @@ export default {
             type: "pie",
             radius: [20, 80],
             center: ["75%", "25%"],
-            roseType: "area",
+            roseType: "radius",
             itemStyle: {
               borderRadius: 5,
             },
@@ -299,7 +302,7 @@ export default {
             type: "pie",
             radius: [20, 80],
             center: ["25%", "75%"],
-            roseType: "area",
+            roseType: "radius",
             itemStyle: {
               borderRadius: 5,
             },
@@ -310,7 +313,7 @@ export default {
             type: "pie",
             radius: [20, 80],
             center: ["75%", "75%"],
-            roseType: "area",
+            roseType: "radius",
             itemStyle: {
               borderRadius: 5,
             },
@@ -410,7 +413,7 @@ export default {
       }
       #zhenduan {
         width: 980px;
-        height: 490px;
+        height: 500px;
       }
     }
     .yaopin {
@@ -445,7 +448,7 @@ export default {
       }
       #huanzhe {
         width: 100%;
-        height: 650px;
+        height: 750px;
       }
     }
   }

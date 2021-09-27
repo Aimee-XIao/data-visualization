@@ -462,7 +462,7 @@ export default {
               line-height: 90px;
             }
             .keshiming {
-              width: 120px;
+              width: 130px;
               flex-shrink: 0;
               font-size: 28px;
               font-family: FZLanTingHei-R-GBK;
@@ -472,6 +472,9 @@ export default {
               padding: 0 20px;
               box-sizing: content-box;
               text-align: left;
+                 overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             }
             .yaopinlei {
               width: 120px;

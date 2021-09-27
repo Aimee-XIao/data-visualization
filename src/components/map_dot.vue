@@ -4,8 +4,8 @@
       <div class="xian"></div>
       <div class="xian-title"></div>
     </div>
-    <div class="dots-title">{{title}}</div>
-    <div class="nanjing-big" >
+    <div class="dots-title">{{ title }}</div>
+    <div class="nanjing-big">
       <div class="nanjing">
         <div class="nanjing-dots" @click="select"></div>
       </div>
@@ -15,11 +15,61 @@
         <img src="../assets/img/plane.png" alt="" />
       </div>
     </div>
-    <p style="position: absolute;font-size: 24px;color: #fff;right: 195px;top: 547px;">上海基地门诊部</p>
-    <p style="position: absolute;font-size: 24px;color: #fff;right: 339px;top: 272px;">空军连云港场站医院</p>
-    <p style="position: absolute;font-size: 24px;color: #fff;right:770px;top: 567px;">空军六安场站医院</p>
-    <p style="position: absolute;font-size: 24px;color: #fff;right:657px;top: 782px;">空40旅向塘场站医院</p>
-    <p style="position: absolute;font-size: 24px;color: #fff;right:357px;top: 1009px;">漳州场站医院</p>
+    <p
+      style="
+        position: absolute;
+        font-size: 24px;
+        color: #fff;
+        right: 195px;
+        top: 547px;
+      "
+    >
+      上海基地门诊部
+    </p>
+    <p
+      style="
+        position: absolute;
+        font-size: 24px;
+        color: #fff;
+        right: 339px;
+        top: 272px;
+      "
+    >
+      空军连云港场站医院
+    </p>
+    <p
+      style="
+        position: absolute;
+        font-size: 24px;
+        color: #fff;
+        right: 770px;
+        top: 567px;
+      "
+    >
+      空军六安场站医院
+    </p>
+    <p
+      style="
+        position: absolute;
+        font-size: 24px;
+        color: #fff;
+        right: 657px;
+        top: 782px;
+      "
+    >
+      空40旅向塘场站医院
+    </p>
+    <p
+      style="
+        position: absolute;
+        font-size: 24px;
+        color: #fff;
+        right: 357px;
+        top: 1009px;
+      "
+    >
+      漳州场站医院
+    </p>
     <div style="position: absolute; top: -420px; left: -1367px">
       <div id="chart"></div>
     </div>
@@ -33,7 +83,7 @@ export default {
     return {
       myChart: null,
       current: 1,
-      title: '共40家医院',
+      title: "共40家医院",
       planePath:
         "path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z",
     };
@@ -56,7 +106,7 @@ export default {
   },
   methods: {
     select() {
-      this.title = '共40家医院'
+      this.title = "共40家医院";
       this.$emit("select", "list" + 1);
     },
     initmap() {
@@ -90,7 +140,7 @@ export default {
         崇明场站医院: [121.3975, 31.6227],
         空军六安场站医院: [116.5176, 31.0528],
         "94622部队医院": [113.5176, 28.0528],
-        福州场站医院:  [120.5853, 27.992],
+        福州场站医院: [120.5853, 27.992],
         地导16旅卫生队: [118.3467, 25.4899],
         雷达12旅卫生队: [116.5107, 26.2196],
         龙田场站医院: [117.7084, 26.371],
@@ -120,7 +170,7 @@ export default {
         [{ name: "漳州场站医院" }, { name: "南京", value: 100 }],
         [{ name: "空军安庆场站医院" }, { name: "南京", value: 100 }],
         [{ name: "雷达第22旅卫生队" }, { name: "南京", value: 100 }],
-         [{ name: "通信二旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "通信二旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "导七旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "空40旅樟树场站医院" }, { name: "南京", value: 100 }],
         [{ name: "空八十三旅嘉兴场站医院" }, { name: "南京", value: 100 }],
@@ -164,6 +214,7 @@ export default {
           var toCoord = geoCoordMap[dataItem[1].name];
           if (fromCoord && toCoord) {
             res.push({
+              name: dataItem[0].name,
               fromName: dataItem[0].name,
               toName: dataItem[1].name,
               coords: [fromCoord, toCoord],
@@ -203,7 +254,7 @@ export default {
             },
             itemStyle: {
               normal: {
-                color: "#ffb400",
+                color: "#fff",
               },
             },
             data: convertData(item[1]),
@@ -234,43 +285,10 @@ export default {
             },
             itemStyle: {
               normal: {
-                color: "#ffb400",
+                color: "#fff",
               },
             },
             data: convertData(item[1]),
-          },
-          {
-            type: "effectScatter", //带有涟漪特效动画的散点（气泡）图。利用动画特效可以将某些想要突出的数据进行视觉突出。
-            coordinateSystem: "geo", //该系列使用的坐标系
-            zlevel: 2,
-            rippleEffect: {
-              //涟漪特效相关配置
-              brushType: "stroke",
-            },
-            label: {
-              //图形上的文本标签，可用于说明图形的一些数据信息，比如值，名称等
-              show: true,
-              position: "right",
-              formatter: "{b}",
-              fontStyle: {
-                fontSize: 24,
-              },
-            },
-            symbolSize: function (val) {
-              //标记的大小
-              return val[2] / 8;
-            },
-            itemStyle: {
-              color: "#46bee9",
-            },
-            data: item[1].map((dataItem) => {
-              return {
-                name: dataItem[1].name,
-                value: geoCoordMap[dataItem[1].name].concat([
-                  dataItem[1].value,
-                ]),
-              };
-            }),
           }
         );
       });
@@ -284,6 +302,16 @@ export default {
               color: "#fff",
             },
           },
+          dataRange: {
+            show:false,
+            x: 'left',
+            y: 'bottom',
+            splitList: [
+                {start: 100, end: 100, color: 'orange'},//当值为5时，区域背景
+                {start: 200, end: 200, color: '#ff6300'},//当值为10时，区域背景
+               
+            ],
+        },
           roam: false,
           zoom: 2.4,
           itemStyle: {
@@ -301,15 +329,41 @@ export default {
       };
       this.myChart.setOption(option);
       this.myChart.on("click", function (params) {
+
         let obj = params.data.fromName;
         for (let v of dots) {
           if (v.unit == obj) {
-             that.title = v.unit 
-              that.$emit("select", "list" + v.id);
+            that.title = v.unit;
+            that.$emit("select", "list" + v.id);
           }
         }
+        that.select_province(params.name, option);
       });
     },
+    select_province(province_name, option) {
+ var len=option.series[0].data.length;
+
+        for(var i=0;i<len;i++){
+            if(option.series[0].data[i].name==province_name){//如果匹配正确
+                //先归零
+                this.ini_province(option);
+                //改变颜色
+                console.log(option.series[0])
+                option.series[0].data[i].value=200;
+                  console.log(option.series[0])
+                this.myChart.setOption(option);
+            }
+        }
+    },
+    ini_province(option){
+        var ini_len=option.series[0].data.length;
+        for(var i=0;i<ini_len;i++){
+            //初始化颜色
+            option.series[0].data[i].value=100;
+            this.myChart.setOption(option);
+        }
+        
+    }
   },
 };
 </script>
@@ -452,7 +506,6 @@ export default {
   .dots-title {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdYAAAB4BAMAAAC9Vc5DAAAAFVBMVEUAvPQVx/YNw/YAvPQBvfUVx/YAvPQH5dgnAAAAB3RSTlMzPTgl1y7UcMnR+wAAAh1JREFUeNrtnUFKA0EURL8W7o3Sez2DeINmLiDeYMj9j2A+icSQLIR0Vxc99RdBHtlMFVKbRyZqXvy9x93hXmIqlg+53HjW9/zOW0zFlrzIB65qNTRkV72q1dCYnXtdLnp9yK88R8RU7NTrctnrLi//mIqdej18VLUa2rHr/1e1Gpqyc6/5UdVqaM5q3vFTah96sJonuA+9WBkfOY0VjcgprGhETmFFI3IKKxqRU1jRm/1urOjNfjf2qhE5hUEjcgqDRuQUBo3IKQwCW8BiGD/xNAaNyCkMGpFTGDQipzBoRE5h0IicwjB+4mkM4yeexqAROYVBI3IKg0bkFAaBLWAxxPgtYDGEROQUhpCInMIQEpFTGEIicgpDSEROYYjhE09jiOETT2MIicgpDCEROYUhJCKnsCeNyCmsCGyB3RC7IXZD7IbYDRkeeX9mN0Rh9u2G2A2xG3KDQSNyArMbIjD7dkPshtgNsRuiEHlvZjdEY/bthtgN+TeDRuRdmd0QnX2wG2I3xG7I5t0Qhci7MbshUrNvN8RuiN2QG6xoRE5hdkPmZHZD5mR2Q+ZkRSNyCivjJ95uiN0QuyF2Q+yGCO6D3RC7IXZD7IYIRG43xG6I3RC7IRt2Q2peCNbQnGEjvxqeD7n4nTI7wWruYnVd1/3W3imzzv9Omd9e16Wq1dCOXfeqVkNbdu51WavfKTMTO/b6cXGf34f7mo/t834AE+2J7j+qYIoAAAAASUVORK5CYII=");
     background-size: 100% 100%;
-    width: 470px;
     height: 120px;
     font-size: 48px;
     font-family: FZLanTingHei-R-GBK;
@@ -460,6 +513,7 @@ export default {
     color: #ffffff;
     line-height: 65px;
     display: flex;
+    padding: 0 10px;
     align-items: center;
     justify-content: center;
   }

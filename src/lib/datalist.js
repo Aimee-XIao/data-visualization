@@ -2515,7 +2515,7 @@ export const list15 = [
 // 连城场站医院16
 export const list16 = [
   {
-      unit: '空军南京场站医院',
+      unit: '连城场站医院',
       firstList: [ // 各科室接诊人员统计
           { name: '保健室', number: 0 },
           { name: '接诊室', number: 0 },
@@ -2554,7 +2554,7 @@ export const list16 = [
         { billingDepartment:'门诊室',drugType:'中成药',drugName:'云南白药气雾剂',number:'121'},
         { billingDepartment:'门诊室',drugType:'中成药',drugName:'麝香祛痛气雾剂（南洋理通）',number:'117'},
         { billingDepartment:'门诊室',drugType:'中成药',drugName:'感冒清热颗粒',number:'115'},
-        { billingDepartment:'门诊室''中成药',drugName:'云南白药膏',number:'114'}
+        { billingDepartment:'门诊室',drugType:'中成药',drugName:'云南白药膏',number:'114'}
       ],
       fourthList: [ // 底部统计
           { name: '单位数量', number: 1 },
@@ -3239,7 +3239,6 @@ export const list21 = [
       }
   }
 ]
-// 汕头场站医院22
 export const list22 = []
 // 崇明场站医院23
 export const list23 = [
@@ -4130,7 +4129,155 @@ export const list28 = [
   }
 ]
 // 龙田场站医院29
-export const list29 = []
+export const list29 = [
+  {
+      unit: '龙田场站医院',
+      firstList: [ // 各科室接诊人员统计
+          { name: '飞行保障值班室', number: 0 },
+          { name: '医师站', number: 0 },
+          { name: '门诊', number: 0 },
+          { name: '门诊部', number: 0 },
+          { name: '门诊妇产科', number: 0 },
+          { name: '门诊内科', number: 0 },
+          { name: '门诊内科A', number: 0 },
+          { name: '门诊室', number: 0 },
+          { name: '门诊外科', number: 0 },
+          { name: '门诊外科A', number: 0 },
+          { name: '内场门诊', number: 2791 },
+          { name: '内科', number: 0 }
+      ], 
+      secondList: {// 各科室开单情况
+          x: ['保健室','接诊室','门诊','门诊部','门诊妇产科','门诊内科','门诊内科A','门诊室','门诊外科','门诊外科A','内场门诊','内科'],
+           y: [0,0,0,0,0,0,0,0,0,0,6970,0] 
+          }, 
+      thirdList: [// 各科室药品开单情况
+        { billingDepartment:'内场门诊',drugType:'西药',drugName:'云南白药膏',number:'282'},
+        { billingDepartment:'内场门诊',drugType:'西药',drugName:'金嗓子喉片',number:'269'},
+        { billingDepartment:'内场门诊',drugType:'西药',drugName:'阿莫西林胶囊',number:'229'},
+        { billingDepartment:'内场门诊',drugType:'西药',drugName:'头孢克肟片',number:'169'},
+        { billingDepartment:'内场门诊',drugType:'西药',drugName:'复方氨酚烷胺胶囊（快克）',number:'134'},
+        { billingDepartment:'内场门诊',drugType:'西药',drugName:'诺氟沙星胶囊',number:'133'},
+        { billingDepartment:'内场门诊',drugType:'西药',drugName:'蓝芩口服液',number:'111'},
+        { billingDepartment:'内场门诊',drugType:'西药',drugName:'头孢克肟胶囊',number:'110'},
+        { billingDepartment:'内场门诊',drugType:'西药',drugName:'奥美拉唑肠溶胶囊',number:'105'},
+        { billingDepartment:'内场门诊',drugType:'西药',drugName:'腰痛贴',number:'93'},
+        { billingDepartment:'内场门诊',drugType:'中成药',drugName:'创可贴（（3X经济型）',number:'280'},
+        { billingDepartment:'内场门诊',drugType:'中成药',drugName:'强力枇杷露',number:'167'},
+        { billingDepartment:'内场门诊',drugType:'中成药',drugName:'感冒灵颗粒（999）',number:'155'},
+        { billingDepartment:'内场门诊',drugType:'中成药',drugName:'感冒清热颗粒',number:'148'},
+        { billingDepartment:'内场门诊',drugType:'中成药',drugName:'急支糖浆',number:'143'},
+        { billingDepartment:'内场门诊',drugType:'中成药',drugName:'蒲地蓝消炎片',number:'105'},
+        { billingDepartment:'内场门诊',drugType:'中成药',drugName:'蒲地蓝消炎口服液',number:'102'},
+        { billingDepartment:'内场门诊',drugType:'中成药',drugName:'云南白药膏',number:'102'},
+        { billingDepartment:'内场门诊',drugType:'中成药',drugName:'三九胃泰颗粒',number:'97'},
+        { billingDepartment:'内场门诊',drugType:'中成药',drugName:'三九感冒灵颗粒',number:'90'}
+      ],
+      fourthList: [ // 底部统计
+          { name: '单位数量', number: 1 },
+          { name: '医生数量', number: 13 },
+          { name: '接诊人数', number: 2791 },
+          { name: '接诊次数', number: 7968 },
+          { name: '用药总量', number: 7663 }
+      ],
+      fifthList: {  // 本年度各月份病患数量
+          x: ['1月','2月','3月','4月','5月','6月','7月','8月','9月'],
+          y: [362,215,296,252,243,251,411,414,145] 
+      },
+      sixthList: { // 诊断结果分析
+          x: ['上呼吸道感染','腰肌劳损','咽炎','急性胃肠炎,非感染性','足癣','腰痛','冠周炎','胃炎','扁桃体炎','结膜炎'],
+          y: [726,170,160,81,80,80,75,66,61,56] 
+       },
+      huanzheList: { // 患者综合分析
+          rose1: [ // 是否新兵
+              {
+                  name: '其他',
+                  value: 921,
+                  itemStyle: {
+                    borderRadius: 8,
+                    color: "rgba(134, 228, 255, 1)"
+                  },
+                },
+                {
+                  name: '老兵',
+                  value: 1870,
+                  itemStyle: {
+                    borderRadius: 8,
+                    color: "rgba(25, 100, 150, 1)"
+                  },
+                }
+          ],
+          rose2: [ // 是否初诊
+              {
+                  name: '初诊',
+                  value: 2609,
+                  itemStyle: {
+                    borderRadius: 8,
+                    color: "rgba(134, 228, 255, 1)"
+                  },
+              },
+              {
+                  name: '复诊',
+                  value: 44 ,
+                  itemStyle: {
+                    borderRadius: 8,
+                    color: "rgba(25, 100, 150, 1)"
+                  }
+              }
+          ],
+          rose3: [
+              {
+                  name: '其他',
+                  value: 2573,
+                  itemStyle: {
+                    borderRadius: 8,
+                    color: "rgba(134, 228, 255, 1)"
+                  },
+              },
+              {
+                name: '门诊处理',
+                value: 218,
+                itemStyle: {
+                  borderRadius: 8,
+                  color: "rgba(25, 150, 200, 1)"
+                },
+            }
+          ],
+          rose4: [
+            {
+              name: '其他',
+              value: 892,
+              itemStyle: {
+                borderRadius: 8,
+                color: "rgba(134, 228, 255, 1)"
+              },
+          },
+          {
+              name: '归队休息',
+              value: 1884,
+              itemStyle: {
+                borderRadius: 8,
+                color: "rgba(25, 175, 225, 1)"
+              }
+          },{
+              name: '住院治疗',
+              value: 9,
+              itemStyle: {
+                borderRadius: 8,
+                color: "rgba(25, 150, 200, 1)"
+              },
+          },
+          {
+              name: '转诊',
+              value: 6,
+              itemStyle: {
+                borderRadius: 8,
+                color: "rgba(25, 100, 150, 1)"
+              }
+          }
+        ]
+      }
+  }
+]
 // 霞浦场站医院30
 export const list30 = []
 // 导三旅卫生队31

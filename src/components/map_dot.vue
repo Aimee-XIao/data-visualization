@@ -4,10 +4,10 @@
       <div class="xian"></div>
       <div class="xian-title"></div>
     </div>
-    <div class="dots-title">共40家医院</div>
-    <div class="nanjing-big">
+    <div class="dots-title">{{title}}</div>
+    <div class="nanjing-big" >
       <div class="nanjing">
-        <div class="nanjing-dots"></div>
+        <div class="nanjing-dots" @click="select"></div>
       </div>
     </div>
     <div class="lines">
@@ -15,38 +15,14 @@
         <img src="../assets/img/plane.png" alt="" />
       </div>
     </div>
-    <!-- 航线 -->
-    <!-- <div class="flight-line">
-      <div class="flight-dots"></div>
-      <div class="flight-dots"></div>
-      <div class="flight-dots"></div>
-      <div class="flight-dots"></div>
-      <div class="flight-dots"></div>
-      <div class="flight-dots"></div>
-    </div> -->
-    <div style="position: absolute; top: -407px; left: -1367px">
+    <p style="position: absolute;font-size: 24px;color: #fff;right: 195px;top: 547px;">上海基地门诊部</p>
+    <p style="position: absolute;font-size: 24px;color: #fff;right: 339px;top: 272px;">空军连云港场站医院</p>
+    <p style="position: absolute;font-size: 24px;color: #fff;right:770px;top: 567px;">空军六安场站医院</p>
+    <p style="position: absolute;font-size: 24px;color: #fff;right:657px;top: 782px;">空40旅向塘场站医院</p>
+    <p style="position: absolute;font-size: 24px;color: #fff;right:357px;top: 1009px;">漳州场站医院</p>
+    <div style="position: absolute; top: -420px; left: -1367px">
       <div id="chart"></div>
     </div>
-
-    <!-- <div>
-      <div
-        class="dots-box"
-        v-for="(item, index) in doctorList"
-        :key="index"
-        
-        :style="{ top: item.top + 'px', left: item.left + 'px' }"
-        @click="select(item)"
-      >
-        <p  v-if="current == item.id  " class="name-box" style="margin-top: 24px; flex-shink: 0">
-          {{ item.unit }}
-        </p>
-         <p  v-if="current == 1 && (item.id == 5 || item.id == 40) " class="name-box" style="margin-top: 24px; flex-shink: 0">
-          {{ item.unit }}
-        </p>
-        <p v-if="current != item.id" class="dots dots-item"></p>
-        <p v-if="current == item.id" :class="current == item.id ? 'select' : ''"></p>
-      </div>
-    </div> -->
   </div>
 </template>
 <script>
@@ -57,6 +33,7 @@ export default {
     return {
       myChart: null,
       current: 1,
+      title: '共40家医院',
       planePath:
         "path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z",
     };
@@ -78,9 +55,9 @@ export default {
     this.initmap();
   },
   methods: {
-    select(item) {
-      this.current = item.id;
-      this.$emit("select", "list" + item.id);
+    select() {
+      this.title = '共40家医院'
+      this.$emit("select", "list" + 1);
     },
     initmap() {
       var that = this;
@@ -89,96 +66,90 @@ export default {
       this.myChart = this.$echarts.init(document.getElementById("chart"));
       // 2. 指定配置和数据
       var geoCoordMap = {
-        // "94654部队": [110.3467, 41.4899],
-        // 雷达4旅卫生队: [113.5107, 23.2196],
-        // 运搜一旅卫生队: [98.1865, 20.1465],
+        "94654部队": [117.0587, 33.0415],
+        雷达4旅卫生队: [117.3667, 34.0415],
+        运搜一旅卫生队: [118.3767, 34.2415],
         武夷山场站医院: [118.03, 27.77],
-        // 地导4旅卫生队: [101.4038, 36.8207],
-        // 雷达20旅卫生队: [110.3467, 41.4899],
-
+        地导4旅卫生队: [117.0587, 33.8207],
+        雷达20旅卫生队: [118.3467, 26.4899],
         空军连云港场站医院: [120.0248, 33.752],
-
-        漳州场站医院: [117.82, 24.45],
+        漳州场站医院: [119.5853, 26.45],
         空军安庆场站医院: [117.0535, 30.5248],
-        // 雷达第22旅卫生队: [101.4038, 36.8207],
-        // 通信二旅卫生队: [110.3467, 41.4899],
-        // 导七旅卫生队: [113.5107, 23.2196],
-        空40旅樟树场站医院: [115.5465, 28.05332],
-        空八十三旅嘉兴场站医院: [120.7508, 30.7626],
-        连城场站医院: [116.7545, 25.7103],
+        雷达第22旅卫生队: [118.3467, 25.4899],
+        通信二旅卫生队: [117.3467, 25.4899],
+        导七旅卫生队: [114.7107, 26.2196],
+        空40旅樟树场站医院: [116.5465, 28.05332],
+        空八十三旅嘉兴场站医院: [120.2312, 31.2065],
+        连城场站医院: [118.5853, 26.45],
         空40旅向塘场站医院: [115.9762, 28.4366],
-        空军南京场站医院: [118.7774, 32.0415],
-        兴宁场站医院: [115.7314, 24.14],
-        地导15旅卫生队: [105.1865, 15.1465],
-        空八十三旅笕桥场站医院: [120.2266, 30.3271],
-        汕头场站医院: [116.7084, 23.371],
-
+        空军南京场站医院: [118.7774, 33.0415],
+        兴宁场站医院: [118.5853, 27.45],
+        地导15旅卫生队: [116.1865, 30.1465],
+        空八十三旅笕桥场站医院: [120.0266, 30.5271],
+        汕头场站医院: [118.7084, 25.371],
         崇明场站医院: [121.3975, 31.6227],
-        空军六安场站医院: [116.5176, 30.8528],
-
-        // "94622部队医院": [105.1865, 15.1465],
-        福州场站医院: [119.28, 26.08],
-        // 地导16旅卫生队: [110.3467, 41.4899],
-        // 雷达12旅卫生队: [113.5107, 23.2196],
-        龙田场站医院: [116.2803, 25.5589],
-        霞浦场站医院: [119.9989, 26.8857],
-        // 导三旅卫生队: [101.4038, 36.8207],
-        衢州场站医院: [118.6853, 28.8666],
-        // 雷达3旅卫生队: [113.5107, 23.2196],
-
-        芜湖场站医院: [117.3764, 30.3263],
-
-        空二十六师光福场站医院: [120.4016, 31.2894],
-        // 空军电子对抗第二团卫生队: [101.4038, 36.8207],
-        硕放场站医院: [120.2612, 31.6002],
-        福州基地门诊部: [119.2853, 26.082],
-        空二十六师泰和场站医院: [114.9078, 26.7911],
-        上海基地门诊部: [120.6865, 30.4765],
-        // 空军第一后勤训练基地: [101.4038, 36.8207],
+        空军六安场站医院: [116.5176, 31.0528],
+        "94622部队医院": [113.5176, 28.0528],
+        福州场站医院:  [120.5853, 27.992],
+        地导16旅卫生队: [118.3467, 25.4899],
+        雷达12旅卫生队: [116.5107, 26.2196],
+        龙田场站医院: [117.7084, 26.371],
+        霞浦场站医院: [121.4975, 30.2857],
+        导三旅卫生队: [117.4038, 30.8207],
+        衢州场站医院: [119.1853, 30.1666],
+        雷达3旅卫生队: [115.5107, 27.9196],
+        芜湖场站医院: [117.6784, 30.9263],
+        空二十六师光福场站医院: [120.0612, 31.8227],
+        空军电子对抗第二团卫生队: [118.0612, 25.8227],
+        硕放场站医院: [120.0612, 31.4765],
+        福州基地门诊部: [120.8853, 27.882],
+        空二十六师泰和场站医院: [117.5465, 28.05332],
+        上海基地门诊部: [121.4975, 31.2527],
+        空军第一后勤训练基地: [118.7674, 34.0415],
         南京: [118.7674, 32.0415],
       };
 
       var XAData = [
-        // [{ name: "94654部队" }, { name: "南京", value: 100 }],
-        // [{ name: "雷达4旅卫生队" }, { name: "南京", value: 100 }],
-        // [{ name: "运搜一旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "94654部队" }, { name: "南京", value: 100 }],
+        [{ name: "雷达4旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "运搜一旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "武夷山场站医院" }, { name: "南京", value: 100 }],
-        // [{ name: "地导4旅卫生队" }, { name: "南京", value: 100 }],
-        // [{ name: "雷达20旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "地导4旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "雷达20旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "空军连云港场站医院" }, { name: "南京", value: 100 }],
         [{ name: "漳州场站医院" }, { name: "南京", value: 100 }],
         [{ name: "空军安庆场站医院" }, { name: "南京", value: 100 }],
-        // [{ name: "雷达第22旅卫生队" }, { name: "南京", value: 100 }],
-        //  [{ name: "通信二旅卫生队" }, { name: "南京", value: 100 }],
-        // [{ name: "导七旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "雷达第22旅卫生队" }, { name: "南京", value: 100 }],
+         [{ name: "通信二旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "导七旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "空40旅樟树场站医院" }, { name: "南京", value: 100 }],
         [{ name: "空八十三旅嘉兴场站医院" }, { name: "南京", value: 100 }],
         [{ name: "连城场站医院" }, { name: "南京", value: 100 }],
         [{ name: "空40旅向塘场站医院" }, { name: "南京", value: 100 }],
         [{ name: "空军南京场站医院" }, { name: "南京", value: 100 }],
         [{ name: "兴宁场站医院" }, { name: "南京", value: 100 }],
-        // [{ name: "地导15旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "地导15旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "空八十三旅笕桥场站医院" }, { name: "南京", value: 100 }],
         [{ name: "汕头场站医院" }, { name: "南京", value: 100 }],
         [{ name: "崇明场站医院" }, { name: "南京", value: 100 }],
         [{ name: "空军六安场站医院" }, { name: "南京", value: 100 }],
-        // [{ name: "94622部队医院" }, { name: "南京", value: 100 }],
+        [{ name: "94622部队医院" }, { name: "南京", value: 100 }],
         [{ name: "福州场站医院" }, { name: "南京", value: 100 }],
-        // [{ name: "地导16旅卫生队" }, { name: "南京", value: 100 }],
-        // [{ name: "雷达12旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "地导16旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "雷达12旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "龙田场站医院" }, { name: "南京", value: 100 }],
         [{ name: "霞浦场站医院" }, { name: "南京", value: 100 }],
         [{ name: "导三旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "衢州场站医院" }, { name: "南京", value: 100 }],
-        // [{ name: "雷达3旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "雷达3旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "芜湖场站医院" }, { name: "南京", value: 100 }],
         [{ name: "空二十六师光福场站医院" }, { name: "南京", value: 100 }],
-        // [{ name: "空军电子对抗第二团卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "空军电子对抗第二团卫生队" }, { name: "南京", value: 100 }],
         [{ name: "硕放场站医院" }, { name: "南京", value: 100 }],
         [{ name: "福州基地门诊部" }, { name: "南京", value: 100 }],
         [{ name: "空二十六师泰和场站医院" }, { name: "南京", value: 100 }],
         [{ name: "上海基地门诊部" }, { name: "南京", value: 100 }],
-        // [{ name: "空军第一后勤训练基地" }, { name: "南京", value: 100 }],
+        [{ name: "空军第一后勤训练基地" }, { name: "南京", value: 100 }],
       ];
 
       let planePath =
@@ -332,7 +303,10 @@ export default {
       this.myChart.on("click", function (params) {
         let obj = params.data.fromName;
         for (let v of dots) {
-          if (v.unit == obj) that.$emit("select", "list" + v.id);
+          if (v.unit == obj) {
+             that.title = v.unit 
+              that.$emit("select", "list" + v.id);
+          }
         }
       });
     },

@@ -213,7 +213,7 @@ export default {
           },
           {
             left: "15%",
-            top: "49%",
+            top: "45%",
             text: "患者处置情况",
             textStyle: {
               fontSize: 28,
@@ -224,7 +224,7 @@ export default {
           },
           {
             left: "75%",
-            top: "49%",
+            top: "45%",
             text: "患者完成状态",
             textStyle: {
               fontSize: 28,

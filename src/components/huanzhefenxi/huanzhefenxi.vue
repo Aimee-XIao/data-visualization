@@ -3,15 +3,24 @@
     <div class="keshi-title"></div>
     <div class="keshi-box">
       <div class="renyuan">
-        <div class="renyuan-title">本年度各月份病患数量</div>
+        <div class="renyuan-title">
+          <p class="shadow"></p>
+          本年度各月份病患数量
+        </div>
         <div id="binhuan"></div>
       </div>
       <div class="keshi">
-        <div class="renyuan-title">诊断结果分析</div>
+        <div class="renyuan-title">
+          <p class="shadow"></p>
+          诊断结果分析
+        </div>
         <div id="zhenduan"></div>
       </div>
       <div class="yaopin">
-        <div class="renyuan-title">患者综合分析</div>
+        <div class="renyuan-title">
+          <p class="shadow"></p>
+          患者综合分析
+        </div>
         <div id="huanzhe"></div>
       </div>
     </div>
@@ -29,7 +38,26 @@ export default {
       huanzheLists: {},
     };
   },
-
+  watch: {
+    renyuan: {
+      handler() {
+        this.initchart();
+      },
+      deep: true,
+    },
+    keshidan: {
+      handler() {
+        this.initZhen();
+      },
+      deep: true,
+    },
+    roseData: {
+      handler() {
+        this.initHuan();
+      },
+      deep: true,
+    },
+  },
   mounted() {
     this.$nextTick(() => {
       this.renyuan && this.initchart();
@@ -44,20 +72,20 @@ export default {
         xAxis: {
           type: "category",
           boundaryGap: false,
-          data: this.renyuan ?.x,
+          data: this.renyuan?.x,
           axisLabel: {
             fontSize: 20,
             color: "rgba(0, 188, 244, 1)",
           },
         },
         grid: {
-          left: '2%',
-          right: '2%',
+          left: "2%",
+          right: "2%",
         },
         yAxis: {
           type: "value",
           axisLabel: {
-            show: false
+            show: false,
           },
           axisLine: {
             show: false,
@@ -66,12 +94,12 @@ export default {
             show: false,
           },
           splitLine: {
-            show: false
+            show: false,
           },
         },
         series: [
           {
-            data: this.renyuan ?.y,
+            data: this.renyuan?.y,
             type: "line",
             smooth: true,
             itemStyle: {
@@ -96,7 +124,7 @@ export default {
     initZhen() {
       this.zhenChart = this.$echarts.init(document.getElementById("zhenduan"));
       this.zhenChart.setOption({
-         grid: {
+        grid: {
           left: "10%",
           right: 0,
           bottom: "16%",
@@ -119,7 +147,7 @@ export default {
           splitLine: {
             show: false,
           },
-          data: this.keshidan ?.x,
+          data: this.keshidan?.x,
         },
         yAxis: {
           type: "value",
@@ -134,7 +162,7 @@ export default {
         },
         series: [
           {
-            data: this.keshidan ?.y,
+            data: this.keshidan?.y,
             type: "bar",
             barWidth: 12,
             showBackground: true,
@@ -157,7 +185,55 @@ export default {
         grid: {
           left: "3%",
           right: 0,
+          bottom: 0,
         },
+        title: [
+          {
+            left: "15%",
+            top: 0,
+            text: "患者身份比例",
+            padding: [0, 0, 80, 0],
+            textStyle: {
+              fontSize: 28,
+              fontWeight: "bold",
+              lineHeight: 80,
+              color: "#fff",
+            },
+          },
+          {
+            left: "75%",
+            top: 0,
+            text: "初复诊情况",
+            textStyle: {
+              fontSize: 28,
+              fontWeight: "bold",
+              lineHeight: 80,
+              color: "#fff",
+            },
+          },
+          {
+            left: "15%",
+            top: "49%",
+            text: "患者处置情况",
+            textStyle: {
+              fontSize: 28,
+              fontWeight: "bold",
+              lineHeight: 80,
+              color: "#fff",
+            },
+          },
+          {
+            left: "75%",
+            top: "49%",
+            text: "患者完成状态",
+            textStyle: {
+              fontSize: 28,
+              fontWeight: "bold",
+              lineHeight: 80,
+              color: "#fff",
+            },
+          },
+        ],
         legend: {
           left: "center",
           top: "bottom",
@@ -172,6 +248,21 @@ export default {
             "rose8",
           ],
         },
+        label: {
+          alignTo: "edge",
+          formatter: "{name|{b}}\n{time|{c} %}",
+          minMargin: 10,
+          edgeDistance: 10,
+          lineHeight: 26,
+          fontSize: 24,
+          color: "rgba(25, 175, 225, 1)",
+          rich: {
+            time: {
+              fontSize: 24,
+              color: "rgba(25, 175, 225, 1)",
+            },
+          },
+        },
         series: [
           {
             name: "Area Mode",
@@ -182,7 +273,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-            data: this.roseData.rose1,
+            data: this.roseData?.rose1,
           },
           {
             name: "Area Mode",
@@ -193,7 +284,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-            data:  this.roseData.rose2
+            data: this.roseData?.rose2,
           },
           {
             name: "Area Mode",
@@ -204,7 +295,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-           data:  this.roseData.rose3
+            data: this.roseData?.rose3,
           },
           {
             name: "Area Mode",
@@ -215,7 +306,7 @@ export default {
             itemStyle: {
               borderRadius: 5,
             },
-            data: this.roseData.rose4
+            data: this.roseData?.rose4,
           },
         ],
       });
@@ -236,7 +327,7 @@ export default {
   .keshi-title {
     width: 290px;
     height: 70px;
-    background-image: url('data:image/png;base64,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');
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAABGCAMAAABfcml8AAAAWlBMVEUAvPQVx/YNw/YCvfUFv/UAvPTQ8/3t+v6l5/sVx/bt+/78/v+i6fzN8/1DzvcAvPTz/P/i9/7D8P1v2fmN4fr3/f/Z9f227fzo+f5K1PiN5Ptx3foAvPT////TAwLDAAAAHXRSTlMzPTjXNSWSyWkty/JxmEHU166GTlzkoXm8SGRX0koCFr8AAAesSURBVHja5ZyBcqMgEIa9uygkGKpotEnO93/NEzD8CGICzSTeZDtz19rfZfm64uLaZn+M/VKWrdlOKj5DBy7Zn6/xQ9kmI32bDlzmWfT7Ec+fobOy6AuI7nj+Pfn9DB0QWZ9uMtJ36MKINhnpO3RhRJuM9G26aETwvMs+Q2ewfFmINhnpu3SxiH7NPH+GzkK08UjnOv6GcfPs7hm7Bzx3hHTQ3fEnDofDIzqtuZRGJ6o6qDsOwxAxjwhdnj2lqCfDQB4t/tVsHt8kVEPNzSBDE9App6v+eHlJ25zkWRohH9HhUUIa0X0dpl7pQ8X4aR3QhRE1tC86Ug2IMHK+eZa2nQkjuutPI3J0olge98xGMZ3ygCGNoFtCRGkxWkcIGWy7Jm3f8iyJUDHctSLkTyOa+2vZQPjSuN+j9vt2tMYX0C0hCoR0TNrg5jGlaDoiTrWV0uRMS2rslh9kYVwxHmcmcZSMLsdXrCAipD6K8ppYeufxhFIQ0RXhOPVKLjjcH/fCbo4w7IkvxuciOn0Xo1FK+U83J3nkGYiV2LqDWougIxGIwoTO1Ty5Mn7Cij2Pz0NUPG37lscTAiLoJCLo4hD5hG4mr0jGPT/Cjy+IKJ0QEMVuZ4AIOo1I64Ao6G82myxMqBuw9Ngr9tDOdAciTeYXUdYC0VO2b3lssQ5E0GlEWgdEQX8zRA0IOTqBFc251Fhr6wbHKBA9ZXOSR54BRIxIO2hj6msYQ4y+PxtRy8KE3EoRJ7DW8reKKJ0QEMUTiruj+f5sRIKBg0sI7GamvsEu8EeV1RKOMg5ET9ng5hEbviREvj8g4vVcuFslhLHBCPFV7nKdunFdR5TejSJYvj0TxdFYIY3IGUirFIfiZqPuihUdNzPXalMqI75mcBE9rauWP6dft4aIDI9bqeshBYG1oXE1o++zFZ/wEaUTCiNK79etIdodYhFddHbx8LidEjOBo8RFVNPSGDXWJGzU86QOQYt72Wj6DsaIY+3kr4NudstzTlESucIIFiKE+IQmSiiuM4monaCtLJDx883jCaFYXjca9tcSNcEmUFiO9h0kpK1kSiZmt4/xX3EPUfx884gzYhGF/DV6qSmWx22ZO5VF3VlS7m7HT2rESi1g64ji55sn9eHKcbTZZV6N8VHbJKJlf7xgKk2a0LgtY/2dNf4odQUKql4fbuT13kxrkY4PFZOyJiEj8qROpURk6/zlWiFy/QHQia6M2/PsHiKla+3FWtVFvV7EfkvJ8gY3ISPypD6cRARdCJHvr6nZtMzaVo42191DVHjXPdMgOpk/v39JRNqfhyh+vnlKl0khgi6AqHT9jSkfNHdcUUwmU24qLLXJGqL3Kq+uwMM5oRApfz6i+PnuEwhpRGOpDDuZiWBm5cwfF9WwYsFxzeNq+yE19W4ezQSiVSWlRrTLfEQJGbFP6sOVj5WB8NfWbKpkjKEcOiEnPaPYbgURjezJDcTuKNNHjq78+Yji57uP3XREI8qypjAJREMdkdC41NtuFa4bfUCD0LqrHH32/Z9ssvZJ27IrrjL3QsO6cdX+zAXGfEToNfvjYn79LD4XkbzTEy20f4JtAFH8fPepG1e/YR3QFRrQd69qpdhecy3XGc8fdZNI/3fTCTj0EMXPd/+MF015A0S+bsww1jX6mqExvebbyTN/fhaN+KfD1kPvUwhR/Hz3z3gFjgwFD+uKSozfBSLo7iNqZZ0z91e7pL9Z4yAa6wISQhQ/330SoUYXJoKQbgqaibmurC6j7vGN3cp1Jsy4pqjkzusAc0Rnvz+ZRMggSsmhbmA1N30QoTaRpIVOpfo5+zEizkb4TnzEVXMDYtL1yDMgiicERClXmbyBWa0irpfkjkvdqe4VooEsIKpMOWRMt8DCSXTEuEDkx3fEtrGGAojS+455Ft2HQz2HblpbqW671OlZVVLiI6K+v9kc/DPY2egCiLS/oynRuSnIgegnfcc8iyek78QzRGoD2UrdRReNDaqgGSLfXxgRZxK3G9948OTHpxCBuPAQpXdm84TXQRv1Y3IQZVRkt5rkPOr6xX489fy5iNxOtjujZuESRom+m+oEt/r82eug0YRQmQARdPU4LaXDcmQjCvkLEGIXS2fEnRefRmRysnARJRNSiGL6cCb/q9vgJ+jMi3fdznTfhYvI8RdGRNW+t4fOaga1gRJd6hqG7IX7xL5j6uuguNbp9IAVur7C05x2YEX8TR+Pt01JJOuvulCm2wJrJTpxk8ja4Ka+Dhp7RjMgd9jgG36GlKfURQDEymncfu6/XXkdtEN0NqIUQimvg2ICAo/VfRMrbZPKqoeMoS5CB0lqzcuJzR1CQMSZex3ONrivex2U4jPiAiJ0rbNUwl9wh8ArReJo6eC+Kvjq66DCK8dQd7/odVDf6GilsZAKiODPR4RXiOqrraPa2nB8xklXZwFEL3sdNF3HR5LnJV1DKZ3567vrhn6bL397BJvX5W+PYPO6fIO/T7gxXZ79MbbN39J7u85GtO1IX62zfzf2a/r482gf7jN0NiJj/8MfO3md7s8td+ws2mSk79CFs2iTkb5DF86i7f/BnBfpwlm0ycLtHbpwFm0y0nfowlm0yUhfr/OzKIftjeW+fZru62Z//wEXFz7QC5uWHQAAAABJRU5ErkJggg==");
     background-size: 100% 100%;
     margin-bottom: 40px;
   }
@@ -256,7 +347,7 @@ export default {
         height: 375px;
       }
       .renyuan-title {
-         width: 500px;
+        width: 500px;
         height: 60px;
         padding-left: 36px;
         text-align: left;
@@ -268,6 +359,16 @@ export default {
         font-family: FZLanTingHei-R-GBK;
         font-weight: bold;
         color: #ffffff;
+        position: relative;
+        .shadow {
+          height: 56px;
+          width: 10px;
+          position: absolute;
+          left: 0;
+          top: 1px;
+          background-color: #00b4ff;
+          box-shadow: 0px 0px 20px rgba(0, 180, 255, 1);
+        }
       }
     }
     .keshi {
@@ -276,7 +377,7 @@ export default {
       align-items: flex-start;
       margin-top: 80px;
       .renyuan-title {
-         width: 500px;
+        width: 500px;
         height: 60px;
         padding-left: 36px;
         text-align: left;
@@ -288,10 +389,20 @@ export default {
         font-family: FZLanTingHei-R-GBK;
         font-weight: bold;
         color: #ffffff;
+        position: relative;
+        .shadow {
+          height: 56px;
+          width: 10px;
+          position: absolute;
+          left: 0;
+          top: 1px;
+          background-color: #00b4ff;
+          box-shadow: 0px 0px 20px rgba(0, 180, 255, 1);
+        }
       }
       #zhenduan {
         width: 980px;
-        height: 600px;
+        height: 490px;
       }
     }
     .yaopin {
@@ -299,9 +410,9 @@ export default {
       justify-content: flex-start;
       flex-direction: column;
       align-items: flex-start;
-      margin-top: 50px;
+      margin-top: 100px;
       .renyuan-title {
-         width: 500px;
+        width: 500px;
         height: 60px;
         padding-left: 36px;
         text-align: left;
@@ -313,10 +424,20 @@ export default {
         font-family: FZLanTingHei-R-GBK;
         font-weight: bold;
         color: #ffffff;
+        position: relative;
+        .shadow {
+          height: 56px;
+          width: 10px;
+          position: absolute;
+          left: 0;
+          top: 1px;
+          background-color: #00b4ff;
+          box-shadow: 0px 0px 20px rgba(0, 180, 255, 1);
+        }
       }
       #huanzhe {
         width: 100%;
-        height: 590px;
+        height: 650px;
       }
     }
   }

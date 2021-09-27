@@ -48,11 +48,7 @@
                 <p class="yaopinshu">{{ ite.number }}</p>
               </div>
             </div>
-            <div
-              class="item-box"
-              id="list_two"
-              style="margin-bottom: 8px"
-            ></div>
+            <div class="item-box" id="list_two" style="margin-bottom: 8px" ></div>
           </div>
         </div>
       </div>
@@ -117,6 +113,7 @@ export default {
       let list_one = document.getElementById("list_one");
       let list_two = document.getElementById("list_two");
       list_two.innerHTML = list_one.innerHTML;
+      wrapper.scrollTop = 0
       function Marquee() {
         if (list_two.offsetHeight - wrapper.scrollTop <= 0)
           wrapper.scrollTop -= list_one.offsetHeight;

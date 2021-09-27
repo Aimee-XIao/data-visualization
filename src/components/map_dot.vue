@@ -24,8 +24,7 @@
       <div class="flight-dots"></div>
       <div class="flight-dots"></div>
     </div> -->
-    <div style="position: absolute;top: -407px;
-    left: -1367px;">
+    <div style="position: absolute; top: -407px; left: -1367px">
       <div id="chart"></div>
     </div>
 
@@ -76,7 +75,7 @@ export default {
     },
   },
   mounted() {
-    // this.initmap();
+    this.initmap();
   },
   methods: {
     select(item) {
@@ -84,7 +83,7 @@ export default {
       this.$emit("select", "list" + item.id);
     },
     initmap() {
-      var that = this
+      var that = this;
       // 1. 实例化对象
       this.$echarts.registerMap("china", { geoJSON: chinaMap });
       this.myChart = this.$echarts.init(document.getElementById("chart"));
@@ -96,7 +95,9 @@ export default {
         武夷山场站医院: [118.03, 27.77],
         // 地导4旅卫生队: [101.4038, 36.8207],
         // 雷达20旅卫生队: [110.3467, 41.4899],
-        空军连云港场站医院: [119.1248, 34.552],
+
+        空军连云港场站医院: [120.0248, 33.752],
+
         漳州场站医院: [117.82, 24.45],
         空军安庆场站医院: [117.0535, 30.5248],
         // 雷达第22旅卫生队: [101.4038, 36.8207],
@@ -111,8 +112,10 @@ export default {
         地导15旅卫生队: [105.1865, 15.1465],
         空八十三旅笕桥场站医院: [120.2266, 30.3271],
         汕头场站医院: [116.7084, 23.371],
+
         崇明场站医院: [121.3975, 31.6227],
-        空军六安场站医院: [116.5076, 31.7528],
+        空军六安场站医院: [116.5176, 30.8528],
+
         // "94622部队医院": [105.1865, 15.1465],
         福州场站医院: [119.28, 26.08],
         // 地导16旅卫生队: [110.3467, 41.4899],
@@ -122,14 +125,16 @@ export default {
         // 导三旅卫生队: [101.4038, 36.8207],
         衢州场站医院: [118.6853, 28.8666],
         // 雷达3旅卫生队: [113.5107, 23.2196],
-        芜湖场站医院: [118.3764, 31.3263],
+
+        芜湖场站医院: [117.3764, 30.3263],
+
         空二十六师光福场站医院: [120.4016, 31.2894],
         // 空军电子对抗第二团卫生队: [101.4038, 36.8207],
         硕放场站医院: [120.2612, 31.6002],
         福州基地门诊部: [119.2853, 26.082],
         空二十六师泰和场站医院: [114.9078, 26.7911],
         上海基地门诊部: [120.6865, 30.4765],
-        空军第一后勤训练基地: [101.4038, 36.8207],
+        // 空军第一后勤训练基地: [101.4038, 36.8207],
         南京: [118.7674, 32.0415],
       };
 
@@ -154,7 +159,7 @@ export default {
         [{ name: "兴宁场站医院" }, { name: "南京", value: 100 }],
         // [{ name: "地导15旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "空八十三旅笕桥场站医院" }, { name: "南京", value: 100 }],
-         [{ name: "汕头场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "汕头场站医院" }, { name: "南京", value: 100 }],
         [{ name: "崇明场站医院" }, { name: "南京", value: 100 }],
         [{ name: "空军六安场站医院" }, { name: "南京", value: 100 }],
         // [{ name: "94622部队医院" }, { name: "南京", value: 100 }],
@@ -164,7 +169,7 @@ export default {
         [{ name: "龙田场站医院" }, { name: "南京", value: 100 }],
         [{ name: "霞浦场站医院" }, { name: "南京", value: 100 }],
         [{ name: "导三旅卫生队" }, { name: "南京", value: 100 }],
-         [{ name: "衢州场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "衢州场站医院" }, { name: "南京", value: 100 }],
         // [{ name: "雷达3旅卫生队" }, { name: "南京", value: 100 }],
         [{ name: "芜湖场站医院" }, { name: "南京", value: 100 }],
         [{ name: "空二十六师光福场站医院" }, { name: "南京", value: 100 }],
@@ -225,59 +230,9 @@ export default {
                 curveness: 0.2,
               },
             },
-            data: convertData(item[1]),
-          },
-          {
-            name: item[0] + " Top3",
-            type: "lines",
-            zlevel: 2,
-            symbol: ["circle", "circle"],
-            symbolSize: 24,
-            effect: {
-              show: true,
-              period: 6,
-              color: "#fff",
-              trailLength: 0,
-              symbol: planePath,
-              symbolSize: 24,
-            },
             itemStyle: {
-              color: "#fff",
-            },
-            lineStyle: {
-              width: 2,
-              color: "#ffb400",
-              opacity: 0.2,
               normal: {
-                color: color[i],
-                width: 0,
-                curveness: 0.2,
-              },
-            },
-            data: convertData(item[1]),
-          },
-          {
-            name: item[0] + " Top3",
-            type: "lines",
-            zlevel: 3,
-            symbol: ["circle", "circle"],
-            symbolSize: 24,
-            effect: {
-              show: true,
-              period: 6,
-              color: "#fff",
-              trailLength: 0,
-              symbol: planePath,
-              symbolSize: 24,
-            },
-            lineStyle: {
-              width: 2,
-              color: "#ffb400",
-              opacity: 0.2,
-              normal: {
-                color: color[i],
-                width: 0,
-                curveness: 0.2,
+                color: "#ffb400",
               },
             },
             data: convertData(item[1]),
@@ -306,37 +261,38 @@ export default {
                 curveness: 0.2,
               },
             },
+            itemStyle: {
+              normal: {
+                color: "#ffb400",
+              },
+            },
             data: convertData(item[1]),
           },
           {
-            name: item[0] + " Top3",
-            type: "effectScatter",
-            coordinateSystem: "geo",
-            zlevel: 4,
+            type: "effectScatter", //带有涟漪特效动画的散点（气泡）图。利用动画特效可以将某些想要突出的数据进行视觉突出。
+            coordinateSystem: "geo", //该系列使用的坐标系
+            zlevel: 2,
             rippleEffect: {
+              //涟漪特效相关配置
               brushType: "stroke",
             },
             label: {
-              normal: {
-                show: false,
-                position: "right",
-                formatter: "{b}",
+              //图形上的文本标签，可用于说明图形的一些数据信息，比如值，名称等
+              show: true,
+              position: "right",
+              formatter: "{b}",
+              fontStyle: {
+                fontSize: 24,
               },
             },
             symbolSize: function (val) {
+              //标记的大小
               return val[2] / 8;
             },
-            lineStyle: {
-              width: 2,
-              color: "#ffb400",
-              opacity: 0.2,
-              normal: {
-                color: color[i],
-                width: 0,
-                curveness: 0.2,
-              },
+            itemStyle: {
+              color: "#46bee9",
             },
-            data: item[1].map(function (dataItem) {
+            data: item[1].map((dataItem) => {
               return {
                 name: dataItem[1].name,
                 value: geoCoordMap[dataItem[1].name].concat([
@@ -373,13 +329,12 @@ export default {
         series: series,
       };
       this.myChart.setOption(option);
-      this.myChart.on('click', function (params) {
-        let obj = params.data.fromName
-        for(let v of dots) {
-
-          if(v.unit == obj) that.$emit("select", "list" + v.id);
+      this.myChart.on("click", function (params) {
+        let obj = params.data.fromName;
+        for (let v of dots) {
+          if (v.unit == obj) that.$emit("select", "list" + v.id);
         }
-         });
+      });
     },
   },
 };

@@ -67,6 +67,13 @@ export default {
   },
   methods: {
     initchart() {
+      if (
+        this.myChart != null &&
+        this.myChart != "" &&
+        this.myChart != undefined
+      ) {
+        this.myChart.dispose(); //销毁
+      }
       this.myChart = this.$echarts.init(document.getElementById("binhuan"));
       this.myChart.setOption({
         xAxis: {
@@ -122,6 +129,13 @@ export default {
       });
     },
     initZhen() {
+      if (
+        this.zhenChart != null &&
+        this.zhenChart != "" &&
+        this.zhenChart != undefined
+      ) {
+        this.zhenChart.dispose(); //销毁
+      }
       this.zhenChart = this.$echarts.init(document.getElementById("zhenduan"));
       this.zhenChart.setOption({
         grid: {
@@ -174,6 +188,13 @@ export default {
       });
     },
     initHuan() {
+      if (
+        this.huanzheChart != null &&
+        this.huanzheChart != "" &&
+        this.huanzheChart != undefined
+      ) {
+        this.huanzheChart.dispose(); //销毁
+      }
       this.huanzheChart = this.$echarts.init(
         document.getElementById("huanzhe")
       );
@@ -234,20 +255,7 @@ export default {
             },
           },
         ],
-        legend: {
-          left: "center",
-          top: "bottom",
-          data: [
-            "rose1",
-            "rose2",
-            "rose3",
-            "rose4",
-            "rose5",
-            "rose6",
-            "rose7",
-            "rose8",
-          ],
-        },
+
         label: {
           alignTo: "edge",
           formatter: "{name|{b}}\n{time|{c} %}",

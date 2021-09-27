@@ -40,36 +40,26 @@
           </div>
           <div class="ranking_wrap ranking_roll" id="wrapper">
             <div class="item-box" id="list_one">
-            <div v-for="(ite, ind) in yaopin" class="item" :key="ind">
-              <p class="xuhao">{{ ind + 1 }}</p>
-              <p class="keshiming">{{ ite.billingDepartment }}</p>
-              <p class="yaopinlei">{{ ite.drugType }}</p>
-              <p class="yaopinming">{{ ite.drugname }}</p>
-              <p class="yaopinshu">{{ ite.number }}</p>
+              <div v-for="(ite, ind) in yaopin" class="item" :key="ind">
+                <p class="xuhao">{{ ind + 1 }}</p>
+                <p class="keshiming">{{ ite.billingDepartment }}</p>
+                <p class="yaopinlei">{{ ite.drugType }}</p>
+                <p class="yaopinming">{{ ite.drugname }}</p>
+                <p class="yaopinshu">{{ ite.number }}</p>
+              </div>
             </div>
+            <div
+              class="item-box"
+              id="list_two"
+              style="margin-bottom: 8px"
+            ></div>
           </div>
-          <div class="item-box" id="list_two" style="margin-bottom: 8px;"></div>
-          </div>
-          <!-- <vue-seamless-scroll
-            :data="yaopin"
-            class="item-box"
-            :class-option="classOption"
-          >
-            <div v-for="(ite, ind) in yaopin" class="item" :key="ind">
-              <p class="xuhao">{{ ind + 1 }}</p>
-              <p class="keshiming">{{ ite.billingDepartment }}</p>
-              <p class="yaopinlei">{{ ite.drugType }}</p>
-              <p class="yaopinming">{{ ite.drugName }}</p>
-              <p class="yaopinshu">{{ ite.number }}</p>
-            </div>
-          </vue-seamless-scroll> -->
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import vueSeamlessScroll from "vue-seamless-scroll";
 export default {
   props: ["renyuan", "keshidan", "yaopin"],
   data() {
@@ -104,60 +94,52 @@ export default {
       },
     };
   },
-  components: {
-    //组件
-    vueSeamlessScroll,
-  },
-  computed: {
-    classOption() {
-      return {
-        step: 0.5, // 数值越大速度滚动越快
-        limitMoveNum: this.yaopin ? this.yaopin.length : 2, // 开始无缝滚动的数据量 this.dataList.length
-        hoverStop: true, // 是否开启鼠标悬停stop
-        direction: 1, // 0向下 1向上 2向左 3向右
-        openWatch: true, // 开启数据实时监控刷新dom
-        singleHeight: 0, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction => 0/1
-        singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction => 2/3
-        waitTime: 1000, // 单步运动停止的时间(默认值1000ms)
-      };
-    },
-  },
   watch: {
     renyuan: {
       handler() {
         this.initchart();
+        this.scroll();
       },
       deep: true,
     },
   },
 
   mounted() {
-    console.log('-------------', this.yaopin)
     this.$nextTick(() => {
-     
       this.keshidan && this.initchart();
-       this.scroll();
+      this.scroll();
     });
   },
   methods: {
     scroll() {
-        let speed = 100;
-        let wrapper = document.getElementById('wrapper');
-        let list_one = document.getElementById('list_one');
-        let list_two = document.getElementById('list_two');
-        list_two.innerHTML = list_one.innerHTML;
-        function Marquee() {
-          if (list_two.offsetHeight - wrapper.scrollTop <= 0)
-            wrapper.scrollTop -= list_one.offsetHeight;
-          else {
-            wrapper.scrollTop += 1
-          }
+      let speed = 100;
+      let wrapper = document.getElementById("wrapper");
+      let list_one = document.getElementById("list_one");
+      let list_two = document.getElementById("list_two");
+      list_two.innerHTML = list_one.innerHTML;
+      function Marquee() {
+        if (list_two.offsetHeight - wrapper.scrollTop <= 0)
+          wrapper.scrollTop -= list_one.offsetHeight;
+        else {
+          wrapper.scrollTop += 1;
         }
-        let MyMar = setInterval(Marquee, speed);
-        wrapper.onmouseover = function () {clearInterval(MyMar)};
-        wrapper.onmouseout = function () {MyMar = setInterval(Marquee, speed)};
-      },
+      }
+      let MyMar = setInterval(Marquee, speed);
+      wrapper.onmouseover = function () {
+        clearInterval(MyMar);
+      };
+      wrapper.onmouseout = function () {
+        MyMar = setInterval(Marquee, speed);
+      };
+    },
     initchart() {
+      if (
+        this.myChart != null &&
+        this.myChart != "" &&
+        this.myChart != undefined
+      ) {
+        this.myChart.dispose(); //销毁
+      }
       this.myChart = this.$echarts.init(document.getElementById("keshi"));
       this.myChart.setOption({
         grid: {
@@ -215,9 +197,9 @@ export default {
 
 <style lang="scss" scoped>
 .ranking_roll {
-    max-height: 500px;
-    overflow: hidden;
-  }
+  max-height: 500px;
+  overflow: hidden;
+}
 .keshifenxi {
   width: 920px;
   height: 100%;
@@ -472,9 +454,9 @@ export default {
               padding: 0 20px;
               box-sizing: content-box;
               text-align: left;
-                 overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
             }
             .yaopinlei {
               width: 120px;
@@ -500,8 +482,8 @@ export default {
               text-align: left;
               line-height: 90px;
               overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+              text-overflow: ellipsis;
+              white-space: nowrap;
             }
             .yaopinshu {
               width: 120px;

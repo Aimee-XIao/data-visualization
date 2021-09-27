@@ -3,7 +3,10 @@
     <div class="keshi-title"></div>
     <div class="keshi-box">
       <div class="renyuan">
-        <div class="renyuan-title">各科室接诊人员统计</div>
+        <div class="renyuan-title">
+          <p class="shadow"></p>
+          各科室接诊人员统计
+        </div>
         <div class="renyuan-box">
           <div
             v-for="(item, index) in renyuan"
@@ -16,11 +19,17 @@
         </div>
       </div>
       <div class="keshi">
-        <div class="renyuan-title">各科室开单情况</div>
+        <div class="renyuan-title">
+          <p class="shadow"></p>
+          各科室开单情况
+        </div>
         <div id="keshi"></div>
       </div>
       <div class="yaopin">
-        <div class="renyuan-title">各科室药品开单情况</div>
+        <div class="renyuan-title">
+          <p class="shadow"></p>
+          各科室药品开单情况
+        </div>
         <div class="yaopin-box">
           <div class="header">
             <p class="xuhao"></p>
@@ -29,26 +38,24 @@
             <p class="yaopinming">药品名称</p>
             <p class="yaopinshu">药品数量</p>
           </div>
-          <vue-seamless-scroll
-            :data="yaopin"
-            class="item-box"
-            :class-option="classOption"
-          >
-            <div v-for="(ite, ind) in yaopin" class="item" :key="ind">
-              <p class="xuhao">{{ ind + 1 }}</p>
-              <p class="keshiming">{{ ite.billingDepartment }}</p>
-              <p class="yaopinlei">{{ ite.drugType }}</p>
-              <p class="yaopinming">{{ ite.drugName }}</p>
-              <p class="yaopinshu">{{ ite.number }}</p>
+          <div class="ranking_wrap ranking_roll" id="wrapper">
+            <div class="item-box" id="list_one">
+              <div v-for="(ite, ind) in yaopin" class="item" :key="ind">
+                <p class="xuhao">{{ ind + 1 }}</p>
+                <p class="keshiming">{{ ite.billingDepartment }}</p>
+                <p class="yaopinlei">{{ ite.drugType }}</p>
+                <p class="yaopinming">{{ ite.drugname }}</p>
+                <p class="yaopinshu">{{ ite.number }}</p>
+              </div>
             </div>
-          </vue-seamless-scroll>
+            <div class="item-box" id="list_two" style="margin-bottom: 8px" ></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import vueSeamlessScroll from "vue-seamless-scroll";
 export default {
   props: ["renyuan", "keshidan", "yaopin"],
   data() {
@@ -83,32 +90,53 @@ export default {
       },
     };
   },
-  components: {
-    //组件
-    vueSeamlessScroll,
-  },
-  computed: {
-    classOption() {
-      return {
-        step: 0.2, // 数值越大速度滚动越快
-        limitMoveNum: 2, // 开始无缝滚动的数据量 this.dataList.length
-        hoverStop: true, // 是否开启鼠标悬停stop
-        direction: 1, // 0向下 1向上 2向左 3向右
-        openWatch: true, // 开启数据实时监控刷新dom
-        singleHeight: 0, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction => 0/1
-        singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction => 2/3
-        waitTime: 1000, // 单步运动停止的时间(默认值1000ms)
-      };
+  watch: {
+    renyuan: {
+      handler() {
+        this.initchart();
+        this.scroll();
+      },
+      deep: true,
     },
   },
 
   mounted() {
     this.$nextTick(() => {
       this.keshidan && this.initchart();
+      this.scroll();
     });
   },
   methods: {
+    scroll() {
+      let speed = 100;
+      let wrapper = document.getElementById("wrapper");
+      let list_one = document.getElementById("list_one");
+      let list_two = document.getElementById("list_two");
+      list_two.innerHTML = list_one.innerHTML;
+      wrapper.scrollTop = 0
+      function Marquee() {
+        if (list_two.offsetHeight - wrapper.scrollTop <= 0)
+          wrapper.scrollTop -= list_one.offsetHeight;
+        else {
+          wrapper.scrollTop += 1;
+        }
+      }
+      let MyMar = setInterval(Marquee, speed);
+      wrapper.onmouseover = function () {
+        clearInterval(MyMar);
+      };
+      wrapper.onmouseout = function () {
+        MyMar = setInterval(Marquee, speed);
+      };
+    },
     initchart() {
+      if (
+        this.myChart != null &&
+        this.myChart != "" &&
+        this.myChart != undefined
+      ) {
+        this.myChart.dispose(); //销毁
+      }
       this.myChart = this.$echarts.init(document.getElementById("keshi"));
       this.myChart.setOption({
         grid: {
@@ -165,8 +193,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.ranking_roll {
+  max-height: 500px;
+  overflow: hidden;
+}
 .keshifenxi {
-  width: 980px;
+  width: 920px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -196,13 +228,23 @@ export default {
         padding-left: 36px;
         text-align: left;
         background-image: url("data:image/png;base64,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");
-        background-size: 100% 130%;
+        background-size: 100% 132%;
         display: flex;
         align-items: center;
         font-size: 32px;
         font-family: FZLanTingHei-R-GBK;
         font-weight: bold;
         color: #ffffff;
+        position: relative;
+        .shadow {
+          height: 56px;
+          width: 10px;
+          position: absolute;
+          left: 0;
+          top: 1px;
+          background-color: #00b4ff;
+          box-shadow: 0px 0px 20px rgba(0, 180, 255, 1);
+        }
       }
       .renyuan-box {
         height: 468px;
@@ -260,6 +302,16 @@ export default {
         font-family: FZLanTingHei-R-GBK;
         font-weight: bold;
         color: #ffffff;
+        position: relative;
+        .shadow {
+          height: 56px;
+          width: 10px;
+          position: absolute;
+          left: 0;
+          top: 1px;
+          background-color: #00b4ff;
+          box-shadow: 0px 0px 20px rgba(0, 180, 255, 1);
+        }
       }
       #keshi {
         width: 896px;
@@ -285,6 +337,16 @@ export default {
         font-family: FZLanTingHei-R-GBK;
         font-weight: bold;
         color: #ffffff;
+        position: relative;
+        .shadow {
+          height: 56px;
+          width: 10px;
+          position: absolute;
+          left: 0;
+          top: 1px;
+          background-color: #00b4ff;
+          box-shadow: 0px 0px 20px rgba(0, 180, 255, 1);
+        }
       }
       .yaopin-box {
         display: flex;
@@ -327,7 +389,7 @@ export default {
           }
           .yaopinming {
             flex: 1;
-            flex-shrink: 0;
+            // flex-shrink: 0;
             font-size: 28px;
             font-family: FZLanTingHei-R-GBK;
             font-weight: 400;
@@ -336,6 +398,9 @@ export default {
             padding: 0 20px;
             box-sizing: content-box;
             text-align: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
           .yaopinshu {
             width: 120px;
@@ -352,12 +417,11 @@ export default {
         }
         .item-box {
           width: 100%;
-          height: 100%;
           display: flex;
           flex-direction: column;
-          height: 500px;
-          overflow-x: hidden;
-          overflow-y: auto;
+          // height: 500px;
+          // overflow: hidden;
+
           .item {
             width: 100%;
             height: 85px;
@@ -377,7 +441,7 @@ export default {
               line-height: 90px;
             }
             .keshiming {
-              width: 120px;
+              width: 130px;
               flex-shrink: 0;
               font-size: 28px;
               font-family: FZLanTingHei-R-GBK;
@@ -387,6 +451,9 @@ export default {
               padding: 0 20px;
               box-sizing: content-box;
               text-align: left;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
             }
             .yaopinlei {
               width: 120px;
@@ -411,6 +478,9 @@ export default {
               box-sizing: content-box;
               text-align: left;
               line-height: 90px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
             }
             .yaopinshu {
               width: 120px;

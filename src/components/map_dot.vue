@@ -16,19 +16,19 @@
       </div>
     </div>
     <!-- 航线 -->
-    <div class="flight-line">
+    <!-- <div class="flight-line">
       <div class="flight-dots"></div>
       <div class="flight-dots"></div>
       <div class="flight-dots"></div>
       <div class="flight-dots"></div>
       <div class="flight-dots"></div>
       <div class="flight-dots"></div>
-    </div>
-    <div style="position: absolute; top: -357px; left: 80px">
+    </div> -->
+    <div style="position: absolute; top: -407px; left: -1367px">
       <div id="chart"></div>
     </div>
 
-    <div>
+    <!-- <div>
       <div
         class="dots-box"
         v-for="(item, index) in doctorList"
@@ -37,7 +37,6 @@
         :style="{ top: item.top + 'px', left: item.left + 'px' }"
         @click="select(item)"
       >
-        <!-- -->
         <p  v-if="current == item.id  " class="name-box" style="margin-top: 24px; flex-shink: 0">
           {{ item.unit }}
         </p>
@@ -47,7 +46,7 @@
         <p v-if="current != item.id" class="dots dots-item"></p>
         <p v-if="current == item.id" :class="current == item.id ? 'select' : ''"></p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
@@ -64,7 +63,7 @@ export default {
   },
   computed: {
     doctorList() {
-      let arr = dots.splice(1)
+      let arr = dots.splice(1);
       return arr.map((item) => {
         return {
           id: item.id,
@@ -84,25 +83,102 @@ export default {
       this.$emit("select", "list" + item.id);
     },
     initmap() {
+      var that = this;
       // 1. 实例化对象
       this.$echarts.registerMap("china", { geoJSON: chinaMap });
       this.myChart = this.$echarts.init(document.getElementById("chart"));
       // 2. 指定配置和数据
       var geoCoordMap = {
-        包头: [110.3467, 41.4899],
-        广州: [113.5107, 23.2196],
-        拉萨: [98.1865, 20.1465],
-        无锡: [105.1865, 15.1465],
-        徐州医学院附属淮海医院: [101.4038, 36.8207],
-        南京医院: [109.1162, 34.2004],
+        // "94654部队": [110.3467, 41.4899],
+        // 雷达4旅卫生队: [113.5107, 23.2196],
+        // 运搜一旅卫生队: [98.1865, 20.1465],
+        武夷山场站医院: [118.03, 27.77],
+        // 地导4旅卫生队: [101.4038, 36.8207],
+        // 雷达20旅卫生队: [110.3467, 41.4899],
+
+        空军连云港场站医院: [120.0248, 33.752],
+
+        漳州场站医院: [117.82, 24.45],
+        空军安庆场站医院: [117.0535, 30.5248],
+        // 雷达第22旅卫生队: [101.4038, 36.8207],
+        // 通信二旅卫生队: [110.3467, 41.4899],
+        // 导七旅卫生队: [113.5107, 23.2196],
+        空40旅樟树场站医院: [115.5465, 28.05332],
+        空八十三旅嘉兴场站医院: [120.7508, 30.7626],
+        连城场站医院: [116.7545, 25.7103],
+        空40旅向塘场站医院: [115.9762, 28.4366],
+        空军南京场站医院: [118.7774, 32.0415],
+        兴宁场站医院: [115.7314, 24.14],
+        地导15旅卫生队: [105.1865, 15.1465],
+        空八十三旅笕桥场站医院: [120.2266, 30.3271],
+        汕头场站医院: [116.7084, 23.371],
+
+        崇明场站医院: [121.3975, 31.6227],
+        空军六安场站医院: [116.5176, 30.8528],
+
+        // "94622部队医院": [105.1865, 15.1465],
+        福州场站医院: [119.28, 26.08],
+        // 地导16旅卫生队: [110.3467, 41.4899],
+        // 雷达12旅卫生队: [113.5107, 23.2196],
+        龙田场站医院: [116.2803, 25.5589],
+        霞浦场站医院: [119.9989, 26.8857],
+        // 导三旅卫生队: [101.4038, 36.8207],
+        衢州场站医院: [118.6853, 28.8666],
+        // 雷达3旅卫生队: [113.5107, 23.2196],
+
+        芜湖场站医院: [117.3764, 30.3263],
+
+        空二十六师光福场站医院: [120.4016, 31.2894],
+        // 空军电子对抗第二团卫生队: [101.4038, 36.8207],
+        硕放场站医院: [120.2612, 31.6002],
+        福州基地门诊部: [119.2853, 26.082],
+        空二十六师泰和场站医院: [114.9078, 26.7911],
+        上海基地门诊部: [120.6865, 30.4765],
+        // 空军第一后勤训练基地: [101.4038, 36.8207],
+        南京: [118.7674, 32.0415],
       };
 
       var XAData = [
-        [{ name: "包头" }, { name: "南京医院", value: 100 }],
-        [{ name: "无锡" }, { name: "南京医院", value: 100 }],
-        [{ name: "广州" }, { name: "南京医院", value: 100 }],
-        [{ name: "徐州医学院附属淮海医院" }, { name: "南京医院", value: 100 }],
-        [{ name: "拉萨" }, { name: "南京医院", value: 100 }],
+        // [{ name: "94654部队" }, { name: "南京", value: 100 }],
+        // [{ name: "雷达4旅卫生队" }, { name: "南京", value: 100 }],
+        // [{ name: "运搜一旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "武夷山场站医院" }, { name: "南京", value: 100 }],
+        // [{ name: "地导4旅卫生队" }, { name: "南京", value: 100 }],
+        // [{ name: "雷达20旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "空军连云港场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "漳州场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "空军安庆场站医院" }, { name: "南京", value: 100 }],
+        // [{ name: "雷达第22旅卫生队" }, { name: "南京", value: 100 }],
+        //  [{ name: "通信二旅卫生队" }, { name: "南京", value: 100 }],
+        // [{ name: "导七旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "空40旅樟树场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "空八十三旅嘉兴场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "连城场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "空40旅向塘场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "空军南京场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "兴宁场站医院" }, { name: "南京", value: 100 }],
+        // [{ name: "地导15旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "空八十三旅笕桥场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "汕头场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "崇明场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "空军六安场站医院" }, { name: "南京", value: 100 }],
+        // [{ name: "94622部队医院" }, { name: "南京", value: 100 }],
+        [{ name: "福州场站医院" }, { name: "南京", value: 100 }],
+        // [{ name: "地导16旅卫生队" }, { name: "南京", value: 100 }],
+        // [{ name: "雷达12旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "龙田场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "霞浦场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "导三旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "衢州场站医院" }, { name: "南京", value: 100 }],
+        // [{ name: "雷达3旅卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "芜湖场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "空二十六师光福场站医院" }, { name: "南京", value: 100 }],
+        // [{ name: "空军电子对抗第二团卫生队" }, { name: "南京", value: 100 }],
+        [{ name: "硕放场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "福州基地门诊部" }, { name: "南京", value: 100 }],
+        [{ name: "空二十六师泰和场站医院" }, { name: "南京", value: 100 }],
+        [{ name: "上海基地门诊部" }, { name: "南京", value: 100 }],
+        // [{ name: "空军第一后勤训练基地" }, { name: "南京", value: 100 }],
       ];
 
       let planePath =
@@ -129,7 +205,7 @@ export default {
 
       var color = ["#ffb400", "#ffb400", "#ffb400"]; //航线的颜色
       var series = [];
-      [["南京医院", XAData]].forEach(function (item, i) {
+      [["南京", XAData]].forEach(function (item, i) {
         series.push(
           {
             name: item[0] + " Top3",
@@ -154,59 +230,9 @@ export default {
                 curveness: 0.2,
               },
             },
-            data: convertData(item[1]),
-          },
-          {
-            name: item[0] + " Top3",
-            type: "lines",
-            zlevel: 2,
-            symbol: ["none", "none"],
-            symbolSize: 24,
-            effect: {
-              show: true,
-              period: 6,
-              color: "#fff",
-              trailLength: 0,
-              symbol: planePath,
-              symbolSize: 24,
-            },
             itemStyle: {
-              color: "#fff",
-            },
-            lineStyle: {
-              width: 2,
-              color: "#ffb400",
-              opacity: 0.2,
               normal: {
-                color: color[i],
-                width: 0,
-                curveness: 0.2,
-              },
-            },
-            data: convertData(item[1]),
-          },
-          {
-            name: item[0] + " Top3",
-            type: "lines",
-            zlevel: 3,
-            symbol: ["none", "none"],
-            symbolSize: 24,
-            effect: {
-              show: true,
-              period: 6,
-              color: "#fff",
-              trailLength: 0,
-              symbol: planePath,
-              symbolSize: 24,
-            },
-            lineStyle: {
-              width: 2,
-              color: "#ffb400",
-              opacity: 0.2,
-              normal: {
-                color: color[i],
-                width: 0,
-                curveness: 0.2,
+                color: "#ffb400",
               },
             },
             data: convertData(item[1]),
@@ -215,7 +241,7 @@ export default {
             name: item[0] + " Top3",
             type: "lines",
             zlevel: 5,
-            symbol: ["none", "none"],
+            symbol: ["circle", "circle"],
             symbolSize: 24,
             effect: {
               show: true,
@@ -235,37 +261,38 @@ export default {
                 curveness: 0.2,
               },
             },
+            itemStyle: {
+              normal: {
+                color: "#ffb400",
+              },
+            },
             data: convertData(item[1]),
           },
           {
-            name: item[0] + " Top3",
-            type: "effectScatter",
-            coordinateSystem: "geo",
-            zlevel: 4,
+            type: "effectScatter", //带有涟漪特效动画的散点（气泡）图。利用动画特效可以将某些想要突出的数据进行视觉突出。
+            coordinateSystem: "geo", //该系列使用的坐标系
+            zlevel: 2,
             rippleEffect: {
+              //涟漪特效相关配置
               brushType: "stroke",
             },
             label: {
-              normal: {
-                show: false,
-                position: "right",
-                formatter: "{b}",
+              //图形上的文本标签，可用于说明图形的一些数据信息，比如值，名称等
+              show: true,
+              position: "right",
+              formatter: "{b}",
+              fontStyle: {
+                fontSize: 24,
               },
             },
             symbolSize: function (val) {
+              //标记的大小
               return val[2] / 8;
             },
-            lineStyle: {
-              width: 2,
-              color: "#ffb400",
-              opacity: 0.2,
-              normal: {
-                color: color[i],
-                width: 0,
-                curveness: 0.2,
-              },
+            itemStyle: {
+              color: "#46bee9",
             },
-            data: item[1].map(function (dataItem) {
+            data: item[1].map((dataItem) => {
               return {
                 name: dataItem[1].name,
                 value: geoCoordMap[dataItem[1].name].concat([
@@ -282,12 +309,12 @@ export default {
           map: "china",
           label: {
             emphasis: {
-              show: false,
+              show: true,
               color: "#fff",
             },
           },
           roam: false,
-          zoom: 1,
+          zoom: 2.4,
           itemStyle: {
             normal: {
               areaColor: "rgba(43, 196, 243, 0.42)",
@@ -302,25 +329,31 @@ export default {
         series: series,
       };
       this.myChart.setOption(option);
+      this.myChart.on("click", function (params) {
+        let obj = params.data.fromName;
+        for (let v of dots) {
+          if (v.unit == obj) that.$emit("select", "list" + v.id);
+        }
+      });
     },
   },
 };
 </script>
 <style lang="scss" scope>
 .name-box {
-      height: 40px;
-    border-radius: 6px;
-        top: -90px;
-    left: -40px;
-    word-break: keep-all;
-    z-index: 4;
-    padding: 6px 20px;
-    align-items: center;
-    display: flex;
-    position: absolute;
-    color: #fff;
-    font-size: 36px;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdYAAAB4BAMAAAC9Vc5DAAAAFVBMVEUAvPQVx/YNw/YAvPQBvfUVx/YAvPQH5dgnAAAAB3RSTlMzPTgl1y7UcMnR+wAAAh1JREFUeNrtnUFKA0EURL8W7o3Sez2DeINmLiDeYMj9j2A+icSQLIR0Vxc99RdBHtlMFVKbRyZqXvy9x93hXmIqlg+53HjW9/zOW0zFlrzIB65qNTRkV72q1dCYnXtdLnp9yK88R8RU7NTrctnrLi//mIqdej18VLUa2rHr/1e1Gpqyc6/5UdVqaM5q3vFTah96sJonuA+9WBkfOY0VjcgprGhETmFFI3IKKxqRU1jRm/1urOjNfjf2qhE5hUEjcgqDRuQUBo3IKQwCW8BiGD/xNAaNyCkMGpFTGDQipzBoRE5h0IicwjB+4mkM4yeexqAROYVBI3IKg0bkFAaBLWAxxPgtYDGEROQUhpCInMIQEpFTGEIicgpDSEROYYjhE09jiOETT2MIicgpDCEROYUhJCKnsCeNyCmsCGyB3RC7IXZD7IbYDRkeeX9mN0Rh9u2G2A2xG3KDQSNyArMbIjD7dkPshtgNsRuiEHlvZjdEY/bthtgN+TeDRuRdmd0QnX2wG2I3xG7I5t0Qhci7MbshUrNvN8RuiN2QG6xoRE5hdkPmZHZD5mR2Q+ZkRSNyCivjJ95uiN0QuyF2Q+yGCO6D3RC7IXZD7IYIRG43xG6I3RC7IRt2Q2peCNbQnGEjvxqeD7n4nTI7wWruYnVd1/3W3imzzv9Omd9e16Wq1dCOXfeqVkNbdu51WavfKTMTO/b6cXGf34f7mo/t834AE+2J7j+qYIoAAAAASUVORK5CYII=');
+  height: 40px;
+  border-radius: 6px;
+  top: -90px;
+  left: -40px;
+  word-break: keep-all;
+  z-index: 4;
+  padding: 6px 20px;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  color: #fff;
+  font-size: 36px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdYAAAB4BAMAAAC9Vc5DAAAAFVBMVEUAvPQVx/YNw/YAvPQBvfUVx/YAvPQH5dgnAAAAB3RSTlMzPTgl1y7UcMnR+wAAAh1JREFUeNrtnUFKA0EURL8W7o3Sez2DeINmLiDeYMj9j2A+icSQLIR0Vxc99RdBHtlMFVKbRyZqXvy9x93hXmIqlg+53HjW9/zOW0zFlrzIB65qNTRkV72q1dCYnXtdLnp9yK88R8RU7NTrctnrLi//mIqdej18VLUa2rHr/1e1Gpqyc6/5UdVqaM5q3vFTah96sJonuA+9WBkfOY0VjcgprGhETmFFI3IKKxqRU1jRm/1urOjNfjf2qhE5hUEjcgqDRuQUBo3IKQwCW8BiGD/xNAaNyCkMGpFTGDQipzBoRE5h0IicwjB+4mkM4yeexqAROYVBI3IKg0bkFAaBLWAxxPgtYDGEROQUhpCInMIQEpFTGEIicgpDSEROYYjhE09jiOETT2MIicgpDCEROYUhJCKnsCeNyCmsCGyB3RC7IXZD7IbYDRkeeX9mN0Rh9u2G2A2xG3KDQSNyArMbIjD7dkPshtgNsRuiEHlvZjdEY/bthtgN+TeDRuRdmd0QnX2wG2I3xG7I5t0Qhci7MbshUrNvN8RuiN2QG6xoRE5hdkPmZHZD5mR2Q+ZkRSNyCivjJ95uiN0QuyF2Q+yGCO6D3RC7IXZD7IYIRG43xG6I3RC7IRt2Q2peCNbQnGEjvxqeD7n4nTI7wWruYnVd1/3W3imzzv9Omd9e16Wq1dCOXfeqVkNbdu51WavfKTMTO/b6cXGf34f7mo/t834AE+2J7j+qYIoAAAAASUVORK5CYII=");
 }
 .map-dots {
   width: 1500px;
@@ -359,6 +392,7 @@ export default {
   .xian-title {
     width: 334px;
     height: 140px;
+    background-size: 100% 100%;
     position: absolute;
     background-image: url("data:image/png;base64,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");
     top: 171px;
@@ -506,7 +540,7 @@ export default {
 }
 
 #chart {
-  width: 1500px;
-  height: 2000px;
+  width: 2500px;
+  height: 2500px;
 }
 </style>
